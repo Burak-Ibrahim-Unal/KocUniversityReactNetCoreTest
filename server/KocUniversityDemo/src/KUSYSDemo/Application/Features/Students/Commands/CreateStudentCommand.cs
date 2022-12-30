@@ -41,9 +41,9 @@ namespace Application.Features.Students.Commands
                 await _studentBusinessRules.CheckStudentByStudentNumber(request.StudentNumber);
 
                 var mappedStudent = _mapper.Map<Student>(request);
-                Student createdStudent = await _studentRepository.AddAsync(mappedStudent);
+                var createdStudent = await _studentRepository.AddAsync(mappedStudent);
 
-                CreateStudentDto studentDtoToReturn = _mapper.Map<CreateStudentDto>(createdStudent);
+                var studentDtoToReturn = _mapper.Map<CreateStudentDto>(createdStudent);
                 return studentDtoToReturn;
             }
         }

@@ -24,9 +24,9 @@ namespace Application.Features.Students.Rules
         //cross cutting concern
         public async Task CheckStudentByStudentNumber(string studentNumber)
         {
-            PagedList<Student> result = await _studentRepository.GetListAsync(student => student.StudentNumber == studentNumber);
+            Student result = await _studentRepository.GetAsync(student => student.StudentNumber == studentNumber);
 
-            if (result.Items.Any()) throw new BusinessException(Messages.StudentExists);
+            if (result == null) throw new BusinessException(Messages.StudentExists);
         }
 
 
