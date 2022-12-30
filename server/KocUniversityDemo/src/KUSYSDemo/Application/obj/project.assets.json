@@ -1427,8 +1427,10 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Core.CrosscuttingConcerns": "1.0.0",
+          "FluentValidation.DependencyInjectionExtensions": "11.4.0",
           "MediatR": "11.1.0",
           "Microsoft.AspNetCore.Http.Extensions": "2.2.0",
+          "Microsoft.Extensions.Caching.Abstractions": "6.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
           "Newtonsoft.Json": "13.0.2"
         },
@@ -1445,6 +1447,7 @@
         "dependencies": {
           "FluentValidation": "11.4.0",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
+          "Microsoft.Extensions.Caching.Abstractions": "6.0.0",
           "Microsoft.Extensions.Configuration.Binder": "6.0.0",
           "Serilog": "2.12.0",
           "Serilog.Sinks.File": "5.0.0"
