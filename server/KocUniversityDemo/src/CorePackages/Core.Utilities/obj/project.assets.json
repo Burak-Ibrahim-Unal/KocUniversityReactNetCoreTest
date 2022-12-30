@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.Utilities\\Core.Utilities.csproj",
+      "projectUniqueName": "C:\\Users\\Burak\\Desktop\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.Utilities\\Core.Utilities.csproj",
       "projectName": "Core.Utilities",
-      "projectPath": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.Utilities\\Core.Utilities.csproj",
+      "projectPath": "C:\\Users\\Burak\\Desktop\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.Utilities\\Core.Utilities.csproj",
       "packagesPath": "C:\\Users\\Burak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.Utilities\\obj\\",
+      "outputPath": "C:\\Users\\Burak\\Desktop\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.Utilities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

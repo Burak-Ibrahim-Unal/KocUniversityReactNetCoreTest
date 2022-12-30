@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Core.CrosscuttingConcerns
-build_property.ProjectDir = C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\CorePackages\Core.CrosscuttingConcerns\
+build_property.ProjectDir = C:\Users\Burak\Desktop\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\CorePackages\Core.CrosscuttingConcerns\

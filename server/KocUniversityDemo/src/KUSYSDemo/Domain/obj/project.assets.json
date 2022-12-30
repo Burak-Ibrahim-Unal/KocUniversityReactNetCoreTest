@@ -844,11 +844,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Burak\\Desktop\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\Domain\\Domain.csproj",
+      "projectPath": "C:\\Users\\Burak\\Desktop\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\Burak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\Domain\\obj\\",
+      "outputPath": "C:\\Users\\Burak\\Desktop\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -869,8 +869,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.Persistence\\Core.Persistence.csproj": {
-              "projectPath": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.Persistence\\Core.Persistence.csproj"
+            "C:\\Users\\Burak\\Desktop\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.Persistence\\Core.Persistence.csproj": {
+              "projectPath": "C:\\Users\\Burak\\Desktop\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.Persistence\\Core.Persistence.csproj"
             }
           }
         }

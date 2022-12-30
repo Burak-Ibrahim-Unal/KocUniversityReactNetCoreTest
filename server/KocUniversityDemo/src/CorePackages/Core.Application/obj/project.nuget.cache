@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NxTti8E01UyO1voKFGmERvob8ktWwsi8dL7DL0ZwxIcqCMABf4YrYszEilz4XarAT0rC3VkeSkWSTS6RVOX76g==",
+  "dgSpecHash": "lynlOb11qc3+9M6g3xra70Rro9oOyq3xUkyGTOsUG3+8C/T7HGimwxH8bUFN+anzRk9tAQYZQ54RLuTOIKSH7w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.Application\\Core.Application.csproj",
+  "projectFilePath": "C:\\Users\\Burak\\Desktop\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.Application\\Core.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Burak\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
     "C:\\Users\\Burak\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
