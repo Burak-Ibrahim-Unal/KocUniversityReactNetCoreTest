@@ -142,3 +142,10 @@ C:\Users\Burak\Desktop\KocUniversityReactNetCoreTest\server\KocUniversityDemo\sr
 C:\Users\Burak\Desktop\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\API\obj\Debug\net6.0\API.pdb
 C:\Users\Burak\Desktop\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\API\obj\Debug\net6.0\API.genruntimeconfig.cache
 C:\Users\Burak\Desktop\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\API\obj\Debug\net6.0\ref\API.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

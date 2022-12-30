@@ -1,4 +1,4 @@
-﻿using API.Helpers;
+﻿using Core.Persistence.Pagination;
 using System.Text.Json;
 
 namespace API.Extensions
