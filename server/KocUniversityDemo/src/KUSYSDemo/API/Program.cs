@@ -1,12 +1,17 @@
 using API.Services;
 using Application;
+using Core.Application.Pipelines.Caching;
 using Core.CrossCuttingConcerns.Exceptions;
 using Domain.Entities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using Persistence;
 using Persistence.Contexts;
 using Persistence.Data;
@@ -20,6 +25,8 @@ builder.Services.AddControllers();
 builder.Services.AddApplicationServices();
 builder.Services.AddPersistenceServices(builder.Configuration);
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddDistributedMemoryCache(); // inm memory
+builder.Services.Configure<CacheSettings>(builder.Configuration.GetSection("CacheSettings")); // get cache settings from appsettings.json
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -76,6 +83,33 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddAuthorization();
 builder.Services.AddScoped<TokenService>();
+
+builder.Services.AddLogging(config =>
+{
+    config.AddDebug();
+    config.AddConsole();
+});
+
+// Prevents to loop to invoke another request
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
+{
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+    options.SerializerSettings.DateFormatString = "yyyy-MM-ddTHH:mm:ssZ";
+    options.SerializerSettings.Formatting = Formatting.Indented;
+    options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+});
+
+//services.AddMvc(config =>
+//{
+//}).SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+//       .AddJsonOptions(options =>
+//       {
+//           options.SerializerSettings.DateFormatString = "yyyy-MM-ddTHH:mm:ssZ";
+//           options.SerializerSettings.Formatting = Formatting.Indented;
+//           options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+//           options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+//       });
+
 
 var app = builder.Build();
 

@@ -14,13 +14,11 @@ namespace Core.Application.Pipelines.Caching
     {
         IDistributedCache _cache;
         ILogger<CachingBehavior<TRequest, TResponse>> _logger;
-        CacheSettings _settings;
 
-        public CachingBehavior(IDistributedCache cache, ILogger<CachingBehavior<TRequest, TResponse>> logger, CacheSettings settings)
+        public CachingBehavior(IDistributedCache cache, ILogger<CachingBehavior<TRequest, TResponse>> logger)
         {
             _cache = cache;
             _logger = logger;
-            _settings = settings;
         }
 
         public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
@@ -31,8 +29,8 @@ namespace Core.Application.Pipelines.Caching
             async Task<TResponse> GetResponseAndAddToCache()
             {
                 response = await next();
-                //var slidingExpiration = request.SlidingExpiration == null ? TimeSpan.FromMinutes(15) : request.SlidingExpiration;
-                var slidingExpiration = request.SlidingExpiration == null ? TimeSpan.FromHours(_settings.SlidingExpiration) : request.SlidingExpiration;
+                var slidingExpiration = request.SlidingExpiration == null ? TimeSpan.FromMinutes(15) : request.SlidingExpiration;
+                //var slidingExpiration = request.SlidingExpiration == null ? TimeSpan.FromHours(_settings.SlidingExpiration) : request.SlidingExpiration;
                 var cacheOptions = new DistributedCacheEntryOptions { SlidingExpiration = slidingExpiration };
                 var serializedData = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(response));
                 await _cache.SetAsync(request.CacheKey, serializedData, cacheOptions, cancellationToken);

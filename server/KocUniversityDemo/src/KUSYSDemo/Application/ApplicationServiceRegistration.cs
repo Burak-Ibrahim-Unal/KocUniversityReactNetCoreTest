@@ -1,5 +1,7 @@
 ﻿using Application.Features.Students.Rules;
+using Core.Application.Pipelines.Caching;
 using Core.Application.Pipelines.Validation;
+using Core.CrossCuttingConcerns.Caching;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,9 +25,11 @@ namespace Application
             services.AddScoped<StudentBusinessRules>();
 
             services.AddSingleton<LoggerServiceBase, FileLogger>();
+            services.AddScoped<ICacheService, CacheService>();
 
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehavior<,>));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(CachingBehavior<,>));
 
             return services;
         }

@@ -2,6 +2,7 @@
 using Application.Features.Students.Models;
 using Application.Services.Repositories;
 using AutoMapper;
+using Core.Application.Pipelines.Caching;
 using Core.Application.Requests;
 using Core.Persistence.Pagination;
 using Domain.Entities;
@@ -14,9 +15,13 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Students.Queries
 {
-    public class GetStudentListQuery : IRequest<StudentListModel>
+    public class GetStudentListQuery : IRequest<StudentListModel>, ICachableRequest
     {
         public PageRequest pageRequest { get; set; }
+
+        public bool BypassCache { get; set; }
+        public string CacheKey => "students-list";
+        public TimeSpan? SlidingExpiration { get; set; }
 
         public class GetStudentListQueryHandler : IRequestHandler<GetStudentListQuery, StudentListModel>
         {

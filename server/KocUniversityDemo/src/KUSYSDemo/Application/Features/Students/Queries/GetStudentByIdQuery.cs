@@ -3,6 +3,7 @@ using Application.Features.Students.Models;
 using Application.Features.Students.Rules;
 using Application.Services.Repositories;
 using AutoMapper;
+using Core.Application.Pipelines.Caching;
 using Domain.Entities;
 using MediatR;
 

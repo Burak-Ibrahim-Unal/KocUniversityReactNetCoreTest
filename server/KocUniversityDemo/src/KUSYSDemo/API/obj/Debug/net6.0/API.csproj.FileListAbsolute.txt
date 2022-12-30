@@ -149,3 +149,6 @@ C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversity
 C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\API\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\API\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\API\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
