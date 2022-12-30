@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Query;
+﻿using Core.Persistence.Pagination;
+using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace Core.Persistence.Repositories
         // linq,predicate,expression,func...
         Task<T> GetAsync(Expression<Func<T, bool>> predicate);
 
-        Task<IPaginate<T>> GetListAsync(Expression<Func<T, bool>> predicate = null,
+        Task<PagedList<T>> GetListAsync(Expression<Func<T, bool>> predicate = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
             Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null,
             int index = 0,

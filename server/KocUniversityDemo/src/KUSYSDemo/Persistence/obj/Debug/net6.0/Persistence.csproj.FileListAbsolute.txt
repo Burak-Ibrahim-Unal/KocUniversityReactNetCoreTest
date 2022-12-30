@@ -1,0 +1,12 @@
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\bin\Debug\net6.0\Persistence.deps.json
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\bin\Debug\net6.0\Persistence.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\bin\Debug\net6.0\Persistence.pdb
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\obj\Debug\net6.0\Persistence.csproj.AssemblyReference.cache
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\obj\Debug\net6.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\obj\Debug\net6.0\Persistence.AssemblyInfoInputs.cache
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\obj\Debug\net6.0\Persistence.AssemblyInfo.cs
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\obj\Debug\net6.0\Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\obj\Debug\net6.0\Persistence.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\obj\Debug\net6.0\refint\Persistence.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\obj\Debug\net6.0\Persistence.pdb
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\obj\Debug\net6.0\ref\Persistence.dll
