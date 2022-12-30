@@ -10,3 +10,14 @@ C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversity
 C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Application\obj\Debug\net6.0\refint\Application.dll
 C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Application\obj\Debug\net6.0\Application.pdb
 C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Application\obj\Debug\net6.0\ref\Application.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Application\bin\Debug\net6.0\Core.Persistence.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Application\bin\Debug\net6.0\Domain.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Application\bin\Debug\net6.0\Core.Persistence.pdb
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Application\bin\Debug\net6.0\Domain.pdb
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Application\obj\Debug\net6.0\Application.csproj.CopyComplete
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Application\bin\Debug\net6.0\Core.Application.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Application\bin\Debug\net6.0\Core.CrosscuttingConcerns.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Application\bin\Debug\net6.0\Core.Utilities.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Application\bin\Debug\net6.0\Core.Application.pdb
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Application\bin\Debug\net6.0\Core.Utilities.pdb
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Application\bin\Debug\net6.0\Core.CrosscuttingConcerns.pdb

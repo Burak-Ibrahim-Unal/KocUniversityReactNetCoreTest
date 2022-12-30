@@ -1,0 +1,12 @@
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\CorePackages\Core.CrosscuttingConcerns\obj\Debug\net6.0\Core.CrosscuttingConcerns.csproj.AssemblyReference.cache
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\CorePackages\Core.CrosscuttingConcerns\obj\Debug\net6.0\Core.CrosscuttingConcerns.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\CorePackages\Core.CrosscuttingConcerns\obj\Debug\net6.0\Core.CrosscuttingConcerns.AssemblyInfoInputs.cache
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\CorePackages\Core.CrosscuttingConcerns\obj\Debug\net6.0\Core.CrosscuttingConcerns.AssemblyInfo.cs
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\CorePackages\Core.CrosscuttingConcerns\obj\Debug\net6.0\Core.CrosscuttingConcerns.csproj.CoreCompileInputs.cache
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\CorePackages\Core.CrosscuttingConcerns\bin\Debug\net6.0\Core.CrosscuttingConcerns.deps.json
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\CorePackages\Core.CrosscuttingConcerns\bin\Debug\net6.0\Core.CrosscuttingConcerns.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\CorePackages\Core.CrosscuttingConcerns\bin\Debug\net6.0\Core.CrosscuttingConcerns.pdb
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\CorePackages\Core.CrosscuttingConcerns\obj\Debug\net6.0\Core.CrosscuttingConcerns.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\CorePackages\Core.CrosscuttingConcerns\obj\Debug\net6.0\refint\Core.CrosscuttingConcerns.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\CorePackages\Core.CrosscuttingConcerns\obj\Debug\net6.0\Core.CrosscuttingConcerns.pdb
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\CorePackages\Core.CrosscuttingConcerns\obj\Debug\net6.0\ref\Core.CrosscuttingConcerns.dll

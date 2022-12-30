@@ -1,7 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Application.Services.Repositories;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Persistence.Contexts;
+using Persistence.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,8 +19,9 @@ namespace Persistence
             services.AddDbContext<BaseDbContext>(option =>
                 option.UseNpgsql(configuration.GetConnectionString("PostgresqlConnectionString")));
 
-            //services.AddScoped<IBrandRepository, BrandRepository>();
-            //services.AddScoped<IModelRepository, ModelRepository>();
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
+            services.AddScoped<IStudentRepository, StudentRepository>();
 
             return services;
         }

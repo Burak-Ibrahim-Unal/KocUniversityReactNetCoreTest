@@ -11,7 +11,6 @@ namespace Core.Persistence.Repositories
 {
     public interface IAsyncRepository<T> where T : Entity
     {
-        // linq,predicate,expression,func...
         Task<T> GetAsync(Expression<Func<T, bool>> predicate);
 
         Task<PagedList<T>> GetListAsync(Expression<Func<T, bool>> predicate = null,

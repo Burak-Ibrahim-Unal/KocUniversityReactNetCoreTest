@@ -10,6 +10,12 @@ namespace Core.Persistence.Pagination
     public class PagedList<T> : List<T>
     {
         public MetaData MetaData { get; set; }
+        public IList<T> Items { get; }
+
+        public PagedList()
+        {
+
+        }
 
         public PagedList(List<T> items, int count, int pageNumber, int pageSize)
         {
@@ -21,6 +27,7 @@ namespace Core.Persistence.Pagination
                 TotalPages = (int)Math.Ceiling(count / (double)pageSize),
             };
             AddRange(items);
+            Items = items;
         }
 
         public static async Task<PagedList<T>> ToPageListAsync(IQueryable<T> query, int pageNumber, int pageSize)
