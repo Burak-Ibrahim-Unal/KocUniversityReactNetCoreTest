@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Domain.Entites;
+using Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using Persistence.Contexts;
 using System;
@@ -14,6 +15,7 @@ namespace Persistence.Data
         public static async Task Initialize(BaseDbContext baseDbContext, UserManager<User> userManager)
         {
             if (baseDbContext.Students.Any()) return;
+            if (baseDbContext.Courses.Any()) return;
 
             if (!userManager.Users.Any())
             {
@@ -45,10 +47,37 @@ namespace Persistence.Data
                     BirthDate = new DateTime(1987, 1, 1)
                 });
             }
-
             foreach (var student in students)
             {
                 baseDbContext.Students.Add(student);
+            }
+
+            var courses = new List<Course>
+            {
+                new Course()
+                {
+                    CourseId="CSI101",
+                    CourseName="Introduction to Computer Science"
+                },
+                new Course()
+                {
+                    CourseId="CSI102",
+                    CourseName="Algorithms"
+                },
+                new Course()
+                {
+                    CourseId="MAT101",
+                    CourseName="Calculus"
+                },
+                new Course()
+                {
+                    CourseId="PHY101",
+                    CourseName="Physics"
+                },
+            };
+            foreach (var course in courses)
+            {
+                baseDbContext.Courses.Add(course);
             }
 
             baseDbContext.SaveChanges();

@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Domain.Entites;
+using Domain.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -19,6 +20,8 @@ namespace Persistence.Contexts
         }
 
         public DbSet<Student> Students { get; set; }
+        public DbSet<Course> Courses { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
