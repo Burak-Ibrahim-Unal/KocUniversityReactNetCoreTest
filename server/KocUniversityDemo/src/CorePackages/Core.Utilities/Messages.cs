@@ -25,7 +25,20 @@ namespace Core.Utilities
         public static string StudentNumberNameValidation = "Student number has to be not empty and unique";
         public static string StudentBirthDateNameValidation = "Student birthDate has to be less then today";
 
+        //Course Messages
+        public static string CourseExists = "Course already exists";
+        public static string CourseDoesNotExist = "Course does not exist";
 
-   
+        public static string CourseAdded = "Course is added successfuly";
+        public static string UpdateCourse = "Course is updated successfuly";
+        public static string DeleteCourse = "Course is deleted successfuly";
+
+        public static string CourseIsNotDeleted = "Problem occurred while deleting course";
+        public static string CourseIsNotUpdated = "Problem occurred while updating course";
+        public static string CourseIsNotAdded = "Problem occurred while adding course";
+
+        public static string CourseIdValidation = "Course first name has to be not empty and minimum 2 characters";
+        public static string CourseNameValidation = "Course last name has to be not empty and minimum 2 characters";
+
     }
 }

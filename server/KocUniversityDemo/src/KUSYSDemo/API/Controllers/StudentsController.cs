@@ -33,22 +33,19 @@ namespace API.Controllers
         }
 
         [HttpPut("update")]
-        public async Task<IActionResult> Update([FromBody] UpdateStudentCommand updateModelCommand)
+        public async Task<IActionResult> Update([FromBody] UpdateStudentCommand updateStudentCommand)
         {
 
-            var result = await Mediator.Send(updateModelCommand);
+            var result = await Mediator.Send(updateStudentCommand);
             return Ok(result);
         }
 
         [HttpDelete("delete")]
-        public async Task<IActionResult> Delete([FromBody] DeleteStudentCommand deleteModelCommand)
+        public async Task<IActionResult> Delete([FromBody] DeleteStudentCommand deleteStudentCommand)
         {
 
-            var result = await Mediator.Send(deleteModelCommand);
+            var result = await Mediator.Send(deleteStudentCommand);
             return Ok(result);
         }
-
-
-
     }
 }

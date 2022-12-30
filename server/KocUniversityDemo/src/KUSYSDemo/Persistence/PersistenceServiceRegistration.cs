@@ -22,6 +22,7 @@ namespace Persistence
             AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
             services.AddScoped<IStudentRepository, StudentRepository>();
+            services.AddScoped<ICourseRepository, CourseRepository>();
 
             return services;
         }

@@ -1,4 +1,5 @@
-﻿using Application.Features.Students.Rules;
+﻿using Application.Features.Courses.Rules;
+using Application.Features.Students.Rules;
 using Core.Application.Pipelines.Caching;
 using Core.Application.Pipelines.Validation;
 using Core.CrossCuttingConcerns.Caching;
@@ -23,6 +24,7 @@ namespace Application
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
             services.AddScoped<StudentBusinessRules>();
+            services.AddScoped<CourseBusinessRules>();
 
             services.AddSingleton<LoggerServiceBase, FileLogger>();
             services.AddScoped<ICacheService, CacheService>();
