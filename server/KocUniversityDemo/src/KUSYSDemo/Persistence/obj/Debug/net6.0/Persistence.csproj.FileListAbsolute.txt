@@ -10,3 +10,10 @@ C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversity
 C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\obj\Debug\net6.0\refint\Persistence.dll
 C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\obj\Debug\net6.0\Persistence.pdb
 C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\obj\Debug\net6.0\ref\Persistence.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\bin\Debug\net6.0\Persistence.runtimeconfig.json
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\bin\Debug\net6.0\Core.Persistence.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\bin\Debug\net6.0\Domain.dll
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\bin\Debug\net6.0\Domain.pdb
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\bin\Debug\net6.0\Core.Persistence.pdb
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\obj\Debug\net6.0\Persistence.csproj.CopyComplete
+C:\Users\Burak\Desktop\Github\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\Persistence\obj\Debug\net6.0\Persistence.genruntimeconfig.cache
