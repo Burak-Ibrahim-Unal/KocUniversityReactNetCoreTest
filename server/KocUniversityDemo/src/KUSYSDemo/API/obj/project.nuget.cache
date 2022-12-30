@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KzjtvgQ7zM7BtVDHfg2cdZZvsXC2WbthqwlxByR+rX9Nh50yufKthwp2T4cmAz5cTwGI8ekWy+w95IyLAd6lFQ==",
+  "dgSpecHash": "xMDQmyeQZj8lJav+IuhEMusFwtIBvkJpPWaRoIvtGKOv6B6EPOd91RIthTI43LjbGH7WQvXC355lj1mSSV1EYQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Burak\\Desktop\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Burak\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Burak\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

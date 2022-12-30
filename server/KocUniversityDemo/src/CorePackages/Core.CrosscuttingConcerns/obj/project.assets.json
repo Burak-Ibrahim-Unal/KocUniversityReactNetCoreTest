@@ -4212,11 +4212,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Burak\\Desktop\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.CrosscuttingConcerns\\Core.CrosscuttingConcerns.csproj",
+      "projectUniqueName": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.CrosscuttingConcerns\\Core.CrosscuttingConcerns.csproj",
       "projectName": "Core.CrosscuttingConcerns",
-      "projectPath": "C:\\Users\\Burak\\Desktop\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.CrosscuttingConcerns\\Core.CrosscuttingConcerns.csproj",
+      "projectPath": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.CrosscuttingConcerns\\Core.CrosscuttingConcerns.csproj",
       "packagesPath": "C:\\Users\\Burak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Burak\\Desktop\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.CrosscuttingConcerns\\obj\\",
+      "outputPath": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.CrosscuttingConcerns\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

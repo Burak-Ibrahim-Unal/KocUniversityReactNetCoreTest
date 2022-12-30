@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Z2aymGAcTS5LRL7/25iAisGDVuZjBPiPjrVlMxAHMsG/6pG8hnAGWja2wDHB9ajCZiM1spd7HsjX0Ipvtz7oVg==",
+  "dgSpecHash": "hAlYG44r52aKyIxyWPoRWx7lbc2QxCFdGBcOa1Yl9k9QqxjYNfGT+Nx6kJ6a2qVbDdn9hng2e8hfAhtKfv6aWw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Burak\\Desktop\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.Persistence\\Core.Persistence.csproj",
+  "projectFilePath": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.Persistence\\Core.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Burak\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.12\\microsoft.entityframeworkcore.6.0.12.nupkg.sha512",
     "C:\\Users\\Burak\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.12\\microsoft.entityframeworkcore.abstractions.6.0.12.nupkg.sha512",

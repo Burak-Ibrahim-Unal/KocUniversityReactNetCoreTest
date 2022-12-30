@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AcbJvZRVajYjerdMIHRvakKofw5pbppSeX4V7kgIlmohZTo7WnUeJvEtD5I1FSTEr56a8CUfFVtDHht6UXC34Q==",
+  "dgSpecHash": "79HmIHSLZKWK9tFW1O4kym1oKLVSeAi8lWqSBGbuOaDu/krmMJDPGQaxqHCGAhjUuRA8I1GTzZNdEooD87bkrw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Burak\\Desktop\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.CrosscuttingConcerns\\Core.CrosscuttingConcerns.csproj",
+  "projectFilePath": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\CorePackages\\Core.CrosscuttingConcerns\\Core.CrosscuttingConcerns.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Burak\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
     "C:\\Users\\Burak\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
