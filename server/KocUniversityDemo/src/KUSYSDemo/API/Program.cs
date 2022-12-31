@@ -60,6 +60,8 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+builder.Services.AddCors();
+
 builder.Services.AddIdentityCore<User>(options =>
 {
     //options.Password.RequireNonAlphanumeric = true;
@@ -127,6 +129,11 @@ if (app.Environment.IsDevelopment())
 }
 
 //app.UseHttpsRedirection();
+
+app.UseCors(option =>
+{
+    option.AllowAnyHeader().AllowAnyMethod().AllowCredentials().WithOrigins("http://localhost:3000");
+});
 
 app.UseAuthentication();
 
