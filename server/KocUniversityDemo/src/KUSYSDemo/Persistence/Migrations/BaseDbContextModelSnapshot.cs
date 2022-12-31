@@ -98,14 +98,14 @@ namespace Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            ConcurrencyStamp = "9f022791-a9a7-458a-b5b2-c8cd01201193",
+                            ConcurrencyStamp = "acff0465-3ee9-46ac-b792-30d16978eede",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = 2,
-                            ConcurrencyStamp = "c9d1a352-0cf7-4bc9-aee2-faab5d3082ad",
+                            ConcurrencyStamp = "a44b3366-02b5-4261-8f12-5925c38c2433",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -118,9 +118,6 @@ namespace Persistence.Migrations
                         .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("BirthDate")
-                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("FirstName")
                         .IsRequired()

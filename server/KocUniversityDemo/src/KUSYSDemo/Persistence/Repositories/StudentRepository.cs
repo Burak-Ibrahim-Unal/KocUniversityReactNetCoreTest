@@ -32,7 +32,6 @@ namespace Persistence.Repositories
                              FirstName = student.FirstName,
                              LastName = student.LastName,
                              StudentNumber = student.StudentNumber,
-                             BirthDate = student.BirthDate,
                          };
 
             return Task.FromResult(result.FirstOrDefault());
@@ -48,7 +47,6 @@ namespace Persistence.Repositories
                              FirstName = student.FirstName,
                              LastName = student.LastName,
                              StudentNumber = student.StudentNumber,
-                             BirthDate = student.BirthDate
                          };
             return await PagedList<StudentListDto>.ToPageListAsync(result, index, size);
         }

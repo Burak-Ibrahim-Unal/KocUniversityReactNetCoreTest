@@ -19,7 +19,6 @@ namespace Application.Features.Students.Commands
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string? StudentNumber { get; set; }
-        public DateTime BirthDate { get; set; }
 
 
         public class CreateStudentCommandHandler : IRequestHandler<CreateStudentCommand, CreateStudentDto>

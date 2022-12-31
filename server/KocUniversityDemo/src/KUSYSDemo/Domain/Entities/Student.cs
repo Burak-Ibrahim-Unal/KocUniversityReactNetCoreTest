@@ -12,19 +12,17 @@ namespace Domain.Entities
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string? StudentNumber { get; set; }
-        public DateTime BirthDate { get; set; }
 
         public Student()
         {
 
         }
 
-        public Student(int id, string firstName, string lastName, DateTime birthDate) : base(id)
+        public Student(int id, string firstName, string lastName) : base(id)
         {
             Id = id;
             FirstName = firstName;
             LastName = lastName;
-            BirthDate = birthDate;
         }
     }
 }

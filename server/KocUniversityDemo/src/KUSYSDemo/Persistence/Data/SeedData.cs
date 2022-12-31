@@ -43,7 +43,6 @@ namespace Persistence.Data
                     FirstName = "Burak" + (i + 1),
                     LastName = "Unal" + (i + 1),
                     StudentNumber = "20231234" + (i + 1 < 10 ? "0" + (i + 1).ToString() : (i + 1).ToString()),
-                    BirthDate = new DateTime(1987, 1, 1)
                 });
             }
             foreach (var student in students)

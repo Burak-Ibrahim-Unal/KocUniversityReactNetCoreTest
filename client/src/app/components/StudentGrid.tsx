@@ -33,7 +33,16 @@ import { styled } from "@mui/material/styles";
 import * as PropTypes from "prop-types";
 import saveAs from "file-saver";
 import { useAppDispatch, useAppSelector } from "../store/configureStore";
-import { studentSelectors, fetchStudentsAsync } from "../../features/student/studentSlice";
+import {
+  studentSelectors,
+  fetchStudentsAsync,
+} from "../../features/student/studentSlice";
+import { Edit, Delete } from "@mui/icons-material";
+import { LoadingButton } from "@mui/lab";
+import { TableCell, Button } from "@mui/material";
+import useStudents from "../hooks/useStudents";
+import { Student } from "../models/student";
+import agent from "../api/agent";
 
 //ilgili rowun idsimni tutan kod
 const getRowId = (row: any) => row.id;
@@ -44,7 +53,6 @@ const columns = [
   { name: "studentNumber", title: "Student Number" },
   { name: "firstName", title: "Student Name" },
   { name: "lastName", title: "Student Last Name" },
-  { name: "birthDate", title: "Birth Date" },
 ];
 //Tablo sütunları End
 
@@ -127,14 +135,13 @@ const CurrencyTypeProvider = (props: any) => (
 
 // Tooltip Ayarları Start
 const TooltipFormatter = ({
-  row: { firstName, lastName, studentNumber, birthDate },
+  row: { firstName, lastName, studentNumber },
   value,
 }: {
   row: {
     firstName: any;
     lastName: any;
     studentNumber: any;
-    birthDate: any;
   };
   value: any;
 }) => (
@@ -148,9 +155,6 @@ const TooltipFormatter = ({
         <br />
         <hr />
         {`Student Number: $${studentNumber}`}
-        <br />
-        <hr />
-        {`Birth Date: ${birthDate}`}
         <br />
         <hr />
       </span>
@@ -179,19 +183,45 @@ const onSave = (workbook: any) => {
 };
 //Excel export end
 
+  
+  
+
 export default function StudentGrid() {
-  const students = useAppSelector(studentSelectors.selectAll);
-  const { studentsLoaded } = useAppSelector(
-    (state) => state.student
+  const { students, metaData } = useStudents();
+  const [editMode, setEditMode] = useState(false);
+  const [selectedStudent, setSelectedStudent] = useState<Student | undefined>(
+    undefined
   );
+  const [loading, setLoading] = useState(false);
+  const [target, setTarget] = useState(0);
   const dispatch = useAppDispatch();
+  const { studentsLoaded } = useAppSelector((state) => state.student);
+
+  function handleSelectStudent(student: Student) {
+    setSelectedStudent(student);
+    setEditMode(true);
+  }
+
+  function handleDeleteStudent(id: number) {
+    setLoading(true);
+    setTarget(id);
+    agent.Admin.deleteStudent(id)
+      .then(() => dispatch(removeStudent(id)))
+      .catch((error) => console.log(error))
+      .finally(() => setLoading(false));
+  }
+
+  function cancelEdit() {
+    if (selectedStudent) setSelectedStudent(undefined);
+    setEditMode(false);
+  }
 
   useEffect(() => {
     if (!studentsLoaded) {
       dispatch(fetchStudentsAsync());
     }
   }, [studentsLoaded, dispatch]);
-  
+
   //Sütun ayarları Start
   const [sorting, setSorting] = useState<any>([
     { columnName: "firstName", direction: "asc" },
@@ -210,19 +240,11 @@ export default function StudentGrid() {
       width: "25%",
       wordWrapEnabled: false,
     },
-    { columnName: "birthDate", align: "center", width: "25%" },
   ]);
   //Sütun ayarları End
 
   //Sütun ayarları Start
   const [rows, setRows] = useState<any[]>(students);
-  const [editingRowIds, setEditingRowIds] = useState([]);
-  const [addedRows, setAddedRows] = useState([]);
-  const [rowChanges, setRowChanges] = useState({});
-
-  const changeAddedRows = (value: any) => {
-    setAddedRows(value);
-  };
 
   //New,edit ve delete çalışması için gerekenler
   const commitChanges = ({
@@ -259,22 +281,6 @@ export default function StudentGrid() {
   };
 
   //Sütun ayarları End
-
-  // Sabit ve hareketli kolonlar için bölünmüş kolonlar Start
-  // const [leftColumns] = useState(['name', 'channel']);
-  // const [rightColumns] = useState<any[]>([
-  // {
-  //   columnName: "description",
-  //   align: "left",
-  //   width: "20%",
-  //   wordWrapEnabled: false,
-  // },
-  // { columnName: "pictureUrl", align: "center", width: "20%" },
-  // { columnName: "brand", align: "center", width: "10%" },
-  // { columnName: "type", align: "center", width: "10%" },
-  // { columnName: "price", align: "center", width: "10%" },
-  // { columnName: "stockQuantity", align: "right", width: 150 },]);
-  // Sabit ve hareketli kolonlar için bölünmüş kolonlar End
 
   //Hücreler arasında klavye yön tuşlarıyla gezmek için gereken kod
   const [focusedCell, setFocusedCell] = useState<any>(undefined);
@@ -361,7 +367,20 @@ export default function StudentGrid() {
         <Table
           tableComponent={TableColorRowComponent}
           columnExtensions={tableColumnAlignmentExtensions}
-        />
+        >
+          <TableCell align="right">
+            <Button
+              onClick={() => handleSelectStudent(student)}
+              startIcon={<Edit />}
+            />
+            <LoadingButton
+              loading={loading && target === student.id}
+              onClick={() => handleDeleteStudent(student.id)}
+              startIcon={<Delete />}
+              color="error"
+            />
+          </TableCell>
+        </Table>
         <TableFilterRow showFilterSelector />
         <TableHeaderRow showSortingControls />
         <PagingPanel pageSizes={pageSizes} />

@@ -59,10 +59,6 @@ export default function StudentDetails() {
                 <TableCell>Description</TableCell>
                 <TableCell>{student.lastName}</TableCell>
               </TableRow>
-              <TableRow>
-                <TableCell>Brand</TableCell>
-                <TableCell>{student.birthDate}</TableCell>
-              </TableRow>
             </TableBody>
           </Table>
         </TableContainer>

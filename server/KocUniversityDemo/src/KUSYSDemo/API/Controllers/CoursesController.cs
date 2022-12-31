@@ -1,5 +1,7 @@
-﻿using Application.Features.Courses.Commands;
+﻿using Application.Features.CourseMatches.Commands;
+using Application.Features.Courses.Commands;
 using Application.Features.Courses.Queries;
+using Application.Features.Students.Commands;
 using Core.Application.Requests;
 using Core.Persistence.Pagination;
 using Domain.Entities;
@@ -44,10 +46,10 @@ namespace API.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [HttpDelete("delete")]
-        public async Task<IActionResult> Delete([FromBody] DeleteCourseCommand deleteCourseCommand)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
         {
-            var result = await Mediator.Send(deleteCourseCommand);
+            var result = await Mediator.Send(new DeleteCourseCommand { Id = id });
             return Ok(result);
         }
     }

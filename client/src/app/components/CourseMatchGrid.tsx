@@ -203,7 +203,6 @@ export default function CourseMatchGrid({ rowItems }: Props) {
       width: "25%",
       wordWrapEnabled: false,
     },
-    { columnName: "birthDate", align: "center", width: "25%" },
   ]);
   //Sütun ayarları End
 

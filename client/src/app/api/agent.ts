@@ -77,6 +77,32 @@ const requests = {
     post: (url: string, body: {}) => axios.post(url, body).then(responseBody),
     put: (url: string, body: {}) => axios.put(url, body).then(responseBody),
     delete: (url: string) => axios.delete(url).then(responseBody),
+    postForm: (url: string, data: FormData) => axios.post(url, data, {
+        headers: { "Content-type": "multipart/form-data" }
+    }).then(responseBody),
+    putForm: (url: string, data: FormData) => axios.put(url, data, {
+        headers: { "Content-type": "multipart/form-data" }
+    }).then(responseBody),
+}
+
+const Admin = {
+    createStudent: (product: any) => requests.postForm("Students/add", createFormData(product)),
+    updateStudent: (product: any) => requests.putForm("Students/update", createFormData(product)),
+    deleteStudent: (id: number) => requests.delete(`Student//${id}`),
+    createCourse: (product: any) => requests.postForm("Courses/add", createFormData(product)),
+    updateCourse: (product: any) => requests.putForm("Courses/update", createFormData(product)),
+    deleteCourse: (id: number) => requests.delete(`Courses/${id}`),
+    createcourseMatch: (product: any) => requests.postForm("CourseMatches/add", createFormData(product)),
+    updatecourseMatch: (product: any) => requests.putForm("CourseMatches/update", createFormData(product)),
+    deletecourseMatch: (id: number) => requests.delete(`CourseMatches/${id}`),
+}
+
+function createFormData(item: any) {
+    let formData = new FormData();
+    for (const key in item) {
+        formData.append(key, item[key])
+    }
+    return formData;
 }
 
 const Student = {
@@ -113,6 +139,7 @@ const agent = {
     Student,
     Course,
     CourseMatch,
+    Admin,
     TestErrors,
     Account
 }

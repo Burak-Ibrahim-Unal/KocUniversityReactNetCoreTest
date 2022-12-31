@@ -44,10 +44,10 @@ namespace API.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [HttpDelete("delete")]
-        public async Task<IActionResult> Delete([FromBody] DeleteCourseMatchCommand deleteCourseMatchCommand)
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
         {
-            var result = await Mediator.Send(deleteCourseMatchCommand);
+            var result = await Mediator.Send(new DeleteCourseMatchCommand { Id = id });
             return Ok(result);
         }
     }

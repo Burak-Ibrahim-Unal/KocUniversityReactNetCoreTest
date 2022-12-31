@@ -24,10 +24,6 @@ namespace Application.Features.Students.Commands
             RuleFor(c => c.StudentNumber)
                 .NotEmpty()
                 .WithMessage(Messages.StudentNumberNameValidation);
-
-            RuleFor(c => c.BirthDate)
-                .LessThan(DateTime.Now)
-                .WithMessage(Messages.StudentBirthDateNameValidation);
         }
     }
 }

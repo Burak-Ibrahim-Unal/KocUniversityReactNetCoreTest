@@ -23,7 +23,6 @@ namespace Core.Utilities
         public static string StudentFirstNameValidation = "Student first name has to be not empty and minimum 2 characters";
         public static string StudentLastNameValidation = "Student last name has to be not empty and minimum 2 characters";
         public static string StudentNumberNameValidation = "Student number has to be not empty and unique";
-        public static string StudentBirthDateNameValidation = "Student birthDate has to be less then today";
 
         //Course Messages
         public static string CourseExists = "Course already exists";

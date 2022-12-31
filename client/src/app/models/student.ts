@@ -3,7 +3,6 @@ export interface Student {
     firstName: string;
     lastName: string;
     studentNumber?: number;
-    birthDate: Date;
 }
 
 export interface StudentParams {
