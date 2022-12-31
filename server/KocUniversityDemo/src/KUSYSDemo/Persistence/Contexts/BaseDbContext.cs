@@ -20,7 +20,7 @@ namespace Persistence.Contexts
 
         public DbSet<Student> Students { get; set; }
         public DbSet<Course> Courses { get; set; }
-
+        public DbSet<CourseMatch> Coursematches { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -30,7 +30,7 @@ namespace Persistence.Contexts
             .HasData(
                     new Role { Id = 1, Name = "Admin", NormalizedName = "ADMIN" },
                     new Role { Id = 2, Name = "User", NormalizedName = "USER" }
-                );
+            );
         }
     }
 }

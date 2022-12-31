@@ -23,6 +23,7 @@ namespace Persistence
 
             services.AddScoped<IStudentRepository, StudentRepository>();
             services.AddScoped<ICourseRepository, CourseRepository>();
+            services.AddScoped<ICourseMatchRepository, CourseMatchRepository>();
 
             return services;
         }

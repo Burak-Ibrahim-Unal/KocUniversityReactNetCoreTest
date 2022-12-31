@@ -99,18 +99,6 @@ builder.Services.AddControllers().AddNewtonsoftJson(options =>
     options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 });
 
-//services.AddMvc(config =>
-//{
-//}).SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
-//       .AddJsonOptions(options =>
-//       {
-//           options.SerializerSettings.DateFormatString = "yyyy-MM-ddTHH:mm:ssZ";
-//           options.SerializerSettings.Formatting = Formatting.Indented;
-//           options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-//           options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-//       });
-
-
 var app = builder.Build();
 
 //Seed Data and Identity Implementation

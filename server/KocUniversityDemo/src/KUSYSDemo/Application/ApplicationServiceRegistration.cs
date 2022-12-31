@@ -1,4 +1,5 @@
-﻿using Application.Features.Courses.Rules;
+﻿using Application.Features.CourseMatches.Rules;
+using Application.Features.Courses.Rules;
 using Application.Features.Students.Rules;
 using Core.Application.Pipelines.Caching;
 using Core.Application.Pipelines.Validation;
@@ -25,6 +26,7 @@ namespace Application
 
             services.AddScoped<StudentBusinessRules>();
             services.AddScoped<CourseBusinessRules>();
+            services.AddScoped<CourseMatchBusinessRules>();
 
             services.AddSingleton<LoggerServiceBase, FileLogger>();
             services.AddScoped<ICacheService, CacheService>();

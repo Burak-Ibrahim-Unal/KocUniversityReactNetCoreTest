@@ -3,8 +3,10 @@ using Application.Features.Students.Queries;
 using Core.Application.Requests;
 using Core.Persistence.Pagination;
 using Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace API.Controllers
 {
@@ -25,6 +27,7 @@ namespace API.Controllers
             return Ok(result);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost("add")]
         public async Task<IActionResult> Add([FromBody] CreateStudentCommand createStudentCommand)
         {
@@ -32,18 +35,18 @@ namespace API.Controllers
             return Created("", result);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut("update")]
         public async Task<IActionResult> Update([FromBody] UpdateStudentCommand updateStudentCommand)
         {
-
             var result = await Mediator.Send(updateStudentCommand);
             return Ok(result);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("delete")]
         public async Task<IActionResult> Delete([FromBody] DeleteStudentCommand deleteStudentCommand)
         {
-
             var result = await Mediator.Send(deleteStudentCommand);
             return Ok(result);
         }

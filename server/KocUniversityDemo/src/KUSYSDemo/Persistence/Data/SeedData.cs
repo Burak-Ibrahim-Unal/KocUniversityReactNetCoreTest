@@ -77,7 +77,7 @@ namespace Persistence.Data
             foreach (var course in courses)
             {
                 baseDbContext.Courses.Add(course);
-            }
+            }     
 
             baseDbContext.SaveChanges();
         }

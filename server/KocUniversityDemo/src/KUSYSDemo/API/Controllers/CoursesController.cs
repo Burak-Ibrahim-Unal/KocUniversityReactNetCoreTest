@@ -3,8 +3,10 @@ using Application.Features.Courses.Queries;
 using Core.Application.Requests;
 using Core.Persistence.Pagination;
 using Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace API.Controllers
 {
@@ -21,10 +23,11 @@ namespace API.Controllers
         public async Task<ActionResult<PagedList<Course>>> GetAll([FromQuery] PageRequest pageRequest)
         {
             GetCourseListQuery getCourseListQuery = new() { pageRequest = pageRequest };
-            var result = await Mediator.Send(getCourseListQuery); // assign "GetCourseListQuery getCourseListQuery" a parameter
+            var result = await Mediator.Send(getCourseListQuery);
             return Ok(result);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost("add")]
         public async Task<IActionResult> Add([FromBody] CreateCourseCommand createCourseCommand)
         {
@@ -32,18 +35,18 @@ namespace API.Controllers
             return Created("", result);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPut("update")]
         public async Task<IActionResult> Update([FromBody] UpdateCourseCommand updateCourseCommand)
         {
-
             var result = await Mediator.Send(updateCourseCommand);
             return Ok(result);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpDelete("delete")]
         public async Task<IActionResult> Delete([FromBody] DeleteCourseCommand deleteCourseCommand)
         {
-
             var result = await Mediator.Send(deleteCourseCommand);
             return Ok(result);
         }

@@ -40,5 +40,20 @@ namespace Core.Utilities
         public static string CourseIdValidation = "Course first name has to be not empty and minimum 2 characters";
         public static string CourseNameValidation = "Course last name has to be not empty and minimum 2 characters";
 
+        //CourseMatch Messages
+        public static string CourseMatchExists = "Student can take same course once at the same time";
+        public static string CourseMatchDoesNotExist = "CourseMatch does not exist";
+
+        public static string CourseMatchAdded = "CourseMatch is added successfuly";
+        public static string UpdateCourseMatch = "CourseMatch is updated successfuly";
+        public static string DeleteCourseMatch = "CourseMatch is deleted successfuly";
+
+        public static string CourseMatchIsNotDeleted = "Problem occurred while deleting courseMatch";
+        public static string CourseMatchIsNotUpdated = "Problem occurred while updating courseMatch";
+        public static string CourseMatchIsNotAdded = "Problem occurred while adding courseMatch";
+
+        public static string CourseMatchStudentIdValidation = "CourseMatch product has to be not empty";
+        public static string CourseMatchCourseIdValidation = "CourseMatch course has to be not empty";
+
     }
 }
