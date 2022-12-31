@@ -44,7 +44,18 @@ axios.interceptors.response.use(async response => {
             break;
         case 401:
             toast.error(data.title);
-            break;
+            history.push({
+                pathname: "/account/login",
+                // state:{error:data}
+            });
+            return;
+        case 403:
+            toast.error(data.title);
+            history.push({
+                pathname: "/account/login",
+                // state:{error:data}
+            });
+            return;
         case 404:
             toast.error(data.title);
             break;
@@ -58,7 +69,7 @@ axios.interceptors.response.use(async response => {
         default:
             break;
     }
-    return Promise.reject(error.response);
+    return Promise.reject(error);
 })
 
 const requests = {
@@ -85,7 +96,8 @@ const CourseMatch = {
 
 const TestErrors = {
     get400Error: () => requests.get('buggy/bad-request'),
-    get401Error: () => requests.get('buggy/unauthorised'),
+    get401Error: () => requests.get('account/login'),
+    get403Error: () => requests.get('account/login'),
     get404Error: () => requests.get('buggy/not-found'),
     get500Error: () => requests.get('buggy/server-error'),
     getValidationError: () => requests.get('buggy/validation-error'),

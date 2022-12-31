@@ -22,7 +22,7 @@ import {
   DataTypeProvider,
   FilteringState,
   IntegratedFiltering,
-  // EditingState,
+  EditingState,
 } from "@devexpress/dx-react-grid";
 import AppPagination from "./AppPagination";
 import TableColorRowComponent from "./TableColorRow";
@@ -348,7 +348,7 @@ export default function StudentGrid() {
         />
         <FilteringState defaultFilters={[]} />
         <IntegratedFiltering />
-        {/* {user && user.roles?.includes("Admin") && (
+        {user && user.roles?.includes("Admin") && (
           <EditingState
             // editingRowIds={editingRowIds}
             // rowChanges={rowChanges}
@@ -357,17 +357,13 @@ export default function StudentGrid() {
             // onAddedRowsChange={changeAddedRows}
             onCommitChanges={() => commitChanges}
           />
-        )} */}
+        )}
         <Table
           tableComponent={TableColorRowComponent}
           columnExtensions={tableColumnAlignmentExtensions}
         />
         <TableFilterRow showFilterSelector />
         <TableHeaderRow showSortingControls />
-        <TableKeyboardNavigation
-          focusedCell={focusedCell}
-          onFocusedCellChange={setFocusedCell}
-        />
         <PagingPanel pageSizes={pageSizes} />
         <TableSelection showSelectAll />
         {/* {metaData && (
@@ -384,9 +380,9 @@ export default function StudentGrid() {
           leftColumns={leftColumns}
           rightColumns={rightColumns}
         /> */}
-        {/* {user && user.roles?.includes("Admin") && (
+        {user && user.roles?.includes("Admin") && (
           <TableEditColumn showAddCommand showEditCommand showDeleteCommand />
-        )} */}
+        )}
       </Grid>
       <span>Total rows selected: {selection.length}</span>
       <GridExporter

@@ -1,13 +1,11 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import Paper from "@mui/material/Paper";
 import { GridExporter } from "@devexpress/dx-react-grid-export";
 import {
   Grid,
   PagingPanel,
   Table,
-  TableKeyboardNavigation,
   TableHeaderRow,
-  TableEditRow,
   TableEditColumn,
   Toolbar,
   ExportPanel,
@@ -24,7 +22,6 @@ import {
   IntegratedFiltering,
   EditingState,
 } from "@devexpress/dx-react-grid";
-import AppPagination from "./AppPagination";
 import TableColorRowComponent from "./TableColorRow";
 import { SortingState, IntegratedSorting } from "@devexpress/dx-react-grid";
 import Tooltip from "@mui/material/Tooltip";
@@ -338,10 +335,6 @@ export default function CourseGrid({ rowItems }: Props) {
         />
         <TableFilterRow showFilterSelector />
         <TableHeaderRow showSortingControls />
-        <TableKeyboardNavigation
-          focusedCell={focusedCell}
-          onFocusedCellChange={setFocusedCell}
-        />
         <PagingPanel pageSizes={pageSizes} />
         <TableSelection showSelectAll />
         {/* {metaData && (

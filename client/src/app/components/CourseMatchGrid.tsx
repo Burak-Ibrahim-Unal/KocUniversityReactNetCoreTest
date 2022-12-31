@@ -1,13 +1,11 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import Paper from "@mui/material/Paper";
 import { GridExporter } from "@devexpress/dx-react-grid-export";
 import {
   Grid,
   PagingPanel,
   Table,
-  TableKeyboardNavigation,
   TableHeaderRow,
-  TableEditRow,
   TableEditColumn,
   Toolbar,
   ExportPanel,
@@ -24,7 +22,6 @@ import {
   IntegratedFiltering,
   EditingState,
 } from "@devexpress/dx-react-grid";
-import AppPagination from "./AppPagination";
 import TableColorRowComponent from "./TableColorRow";
 import { SortingState, IntegratedSorting } from "@devexpress/dx-react-grid";
 import Tooltip from "@mui/material/Tooltip";
@@ -45,8 +42,8 @@ const getRowId = (row: any) => row.id;
 const columns = [
   //{ name: "id", title: "ID" },
   { name: "studentFirstName", title: "Student First Name" },
-  { name: "studentLastName", title: "CourseMatch Name" },
-  { name: "studentNumber", title: "CourseMatch Last Name" },
+  { name: "studentLastName", title: "Student Last Name" },
+  { name: "studentNumber", title: "Student Number" },
   { name: "courseId", title: "Course Id" },
   { name: "courseName", title: "Course Name" },
 ];
@@ -360,10 +357,6 @@ export default function CourseMatchGrid({ rowItems }: Props) {
         />
         <TableFilterRow showFilterSelector />
         <TableHeaderRow showSortingControls />
-        <TableKeyboardNavigation
-          focusedCell={focusedCell}
-          onFocusedCellChange={setFocusedCell}
-        />
         <PagingPanel pageSizes={pageSizes} />
         <TableSelection showSelectAll />
         {/* {metaData && (
