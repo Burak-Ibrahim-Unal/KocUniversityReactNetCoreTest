@@ -32,6 +32,7 @@ import Input from "@mui/material/Input";
 import { styled } from "@mui/material/styles";
 import * as PropTypes from "prop-types";
 import saveAs from "file-saver";
+import { useAppSelector } from "../store/configureStore";
 
 export interface Props {
   rowItems: any[];
@@ -308,6 +309,8 @@ export default function StudentGrid({ rowItems }: Props) {
   const [pageSizes] = useState([5, 10, 20, 50]);
   const [currentPage, setCurrentPage] = useState(0);
   // Pagination Hook Ayarları End
+  
+  const { user } = useAppSelector((state) => state.account);
 
   return (
     <Paper>
@@ -342,6 +345,7 @@ export default function StudentGrid({ rowItems }: Props) {
         />
         <FilteringState defaultFilters={[]} />
         <IntegratedFiltering />
+        {user && user.roles?.includes("Admin") && (
         <EditingState
           editingRowIds={editingRowIds}
           rowChanges={rowChanges}
@@ -349,7 +353,7 @@ export default function StudentGrid({ rowItems }: Props) {
           addedRows={addedRows}
           onAddedRowsChange={changeAddedRows}
           onCommitChanges={() => commitChanges}
-        />
+        />)}
         <Table
           tableComponent={TableColorRowComponent}
           columnExtensions={tableColumnAlignmentExtensions}
