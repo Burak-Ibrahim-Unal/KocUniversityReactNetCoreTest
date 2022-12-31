@@ -62,7 +62,7 @@ export default function Header({ darkMode, handleDarkThemeChange }: Props) {
             to="/"
             sx={navStyles}
           >
-            EcommerceApp
+            KUSYS
           </Typography>
         </Box>
         <List sx={{ display: "flex" }}>

@@ -22,7 +22,7 @@ import {
   DataTypeProvider,
   FilteringState,
   IntegratedFiltering,
-  EditingState,
+  // EditingState,
 } from "@devexpress/dx-react-grid";
 import AppPagination from "./AppPagination";
 import TableColorRowComponent from "./TableColorRow";
@@ -32,11 +32,8 @@ import Input from "@mui/material/Input";
 import { styled } from "@mui/material/styles";
 import * as PropTypes from "prop-types";
 import saveAs from "file-saver";
-import { useAppSelector } from "../store/configureStore";
-
-export interface Props {
-  rowItems: any[];
-}
+import { useAppDispatch, useAppSelector } from "../store/configureStore";
+import { studentSelectors, fetchStudentsAsync } from "../../features/student/studentSlice";
 
 //ilgili rowun idsimni tutan kod
 const getRowId = (row: any) => row.id;
@@ -182,7 +179,19 @@ const onSave = (workbook: any) => {
 };
 //Excel export end
 
-export default function StudentGrid({ rowItems }: Props) {
+export default function StudentGrid() {
+  const students = useAppSelector(studentSelectors.selectAll);
+  const { studentsLoaded } = useAppSelector(
+    (state) => state.student
+  );
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    if (!studentsLoaded) {
+      dispatch(fetchStudentsAsync());
+    }
+  }, [studentsLoaded, dispatch]);
+  
   //Sütun ayarları Start
   const [sorting, setSorting] = useState<any>([
     { columnName: "firstName", direction: "asc" },
@@ -206,7 +215,7 @@ export default function StudentGrid({ rowItems }: Props) {
   //Sütun ayarları End
 
   //Sütun ayarları Start
-  const [rows, setRows] = useState<any[]>(rowItems);
+  const [rows, setRows] = useState<any[]>(students);
   const [editingRowIds, setEditingRowIds] = useState([]);
   const [addedRows, setAddedRows] = useState([]);
   const [rowChanges, setRowChanges] = useState({});
@@ -308,7 +317,7 @@ export default function StudentGrid({ rowItems }: Props) {
 
   return (
     <Paper>
-      <Grid rows={rowItems} columns={columns} getRowId={getRowId}>
+      <Grid rows={students} columns={columns} getRowId={getRowId}>
         <SelectionState
           selection={selection}
           onSelectionChange={setSelection}
@@ -339,16 +348,16 @@ export default function StudentGrid({ rowItems }: Props) {
         />
         <FilteringState defaultFilters={[]} />
         <IntegratedFiltering />
-        {user && user.roles?.includes("Admin") && (
+        {/* {user && user.roles?.includes("Admin") && (
           <EditingState
-            editingRowIds={editingRowIds}
-            rowChanges={rowChanges}
-            onRowChangesChange={setRowChanges}
-            addedRows={addedRows}
-            onAddedRowsChange={changeAddedRows}
+            // editingRowIds={editingRowIds}
+            // rowChanges={rowChanges}
+            // onRowChangesChange={setRowChanges}
+            // addedRows={addedRows}
+            // onAddedRowsChange={changeAddedRows}
             onCommitChanges={() => commitChanges}
           />
-        )}
+        )} */}
         <Table
           tableComponent={TableColorRowComponent}
           columnExtensions={tableColumnAlignmentExtensions}
@@ -375,14 +384,14 @@ export default function StudentGrid({ rowItems }: Props) {
           leftColumns={leftColumns}
           rightColumns={rightColumns}
         /> */}
-        {user && user.roles?.includes("Admin") && (
+        {/* {user && user.roles?.includes("Admin") && (
           <TableEditColumn showAddCommand showEditCommand showDeleteCommand />
-        )}
+        )} */}
       </Grid>
       <span>Total rows selected: {selection.length}</span>
       <GridExporter
         ref={exporterRef}
-        rows={rowItems}
+        rows={students}
         columns={columns}
         selection={selection}
         onSave={onSave}
