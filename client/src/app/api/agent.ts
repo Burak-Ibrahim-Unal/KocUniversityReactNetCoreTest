@@ -78,6 +78,11 @@ const Course = {
     details: (id: number) => requests.get(`courses/${id}`),
 }
 
+const CourseMatch = {
+    list: (params: URLSearchParams) => requests.get('courseMatches/getall', params),
+    details: (id: number) => requests.get(`courseMatches/${id}`),
+}
+
 const TestErrors = {
     get400Error: () => requests.get('buggy/bad-request'),
     get401Error: () => requests.get('buggy/unauthorised'),
@@ -95,6 +100,7 @@ const Account = {
 const agent = {
     Student,
     Course,
+    CourseMatch,
     TestErrors,
     Account
 }

@@ -7,6 +7,8 @@ import { fetchCurrentUser } from "../../features/account/accountSlice";
 import Login from "../../features/account/Login";
 import Register from "../../features/account/Register";
 import ContactPage from "../../features/Contact/Contact";
+import CourseMatchDetails from "../../features/courseMatch/CourseMatchDetails";
+import CourseMatchList from "../../features/courseMatch/CourseMatchList";
 import CourseDetails from "../../features/courses/CourseDetails";
 import CourseList from "../../features/courses/CourseList";
 import HomePage from "../../features/home/HomePage";
@@ -64,8 +66,8 @@ function App() {
           <Route path='/students/:id' component={StudentDetails} />
           <Route exact path='/courses' component={CourseList} />
           <Route path='/courses/:id' component={CourseDetails} />
-          {/* <Route exact path='/coursematches' component={CourseMatchList} />
-          <Route path='/coursematches/:id' component={CourseMatchDetails} /> */}
+          <Route exact path='/coursematches' component={CourseMatchList} />
+          <Route path='/coursematches/:id' component={CourseMatchDetails} />
           <Route path='/about' component={AboutPage} />
           <Route path='/contact' component={ContactPage} />
           <Route path='/server-error' component={ServerError} />
