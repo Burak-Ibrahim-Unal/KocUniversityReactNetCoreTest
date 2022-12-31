@@ -44,10 +44,8 @@ const getRowId = (row: any) => row.id;
 //Tablo sütunları Start
 const columns = [
   //{ name: "id", title: "ID" },
-  { name: "studentNumber", title: "Student Number" },
-  { name: "firstName", title: "Student Name" },
-  { name: "lastName", title: "Student Last Name" },
-  { name: "birthDate", title: "Birth Date" },
+  { name: "courseId", title: "Course Number" },
+  { name: "courseName", title: "Course Name" },
 ];
 //Tablo sütunları End
 
@@ -130,38 +128,24 @@ const CurrencyTypeProvider = (props: any) => (
 
 // Tooltip Ayarları Start
 const TooltipFormatter = ({
-  row: { name, description, price, type, brand, stockQuantity },
+  row: { courseId, courseName },
   value,
 }: {
   row: {
-    name: any;
-    description: any;
-    price: any;
-    type: any;
-    brand: any;
-    stockQuantity: any;
+    courseId: any;
+    courseName: any;
   };
   value: any;
 }) => (
   <Tooltip
     title={
       <span>
-        {`Name: ${name}`}
+        {`Course Id: ${courseId}`}
         <br />
         <hr />
-        {`Description: ${description}`}
+        {`Course Name: ${courseName}`}
         <br />
         <hr />
-        {`Price: $${price}`}
-        <br />
-        <hr />
-        {`Type: ${type}`}
-        <br />
-        <hr />
-        {`Brand: ${brand}`}
-        <br />
-        <hr />
-        {`Stock Quantity: ${stockQuantity}`}
       </span>
     }
   >
@@ -188,7 +172,7 @@ const onSave = (workbook: any) => {
 };
 //Excel export end
 
-export default function StudentGrid({ rowItems }: Props) {
+export default function CourseGrid({ rowItems }: Props) {
   //Sütun ayarları Start
   const [sorting, setSorting] = useState<any>([
     { columnName: "firstName", direction: "asc" },
@@ -196,18 +180,11 @@ export default function StudentGrid({ rowItems }: Props) {
   const [selection, setSelection] = useState<any>([]);
   const [tableColumnAlignmentExtensions] = useState<any[]>([
     {
-      columnName: "firstName",
+      columnName: "courseId",
       align: "left",
       width: "25%",
     },
-    { columnName: "lastName", align: "center", width: "25%" },
-    {
-      columnName: "studentNumber",
-      align: "left",
-      width: "25%",
-      wordWrapEnabled: false,
-    },
-    { columnName: "birthDate", align: "center", width: "25%" },
+    { columnName: "courseName", align: "center", width: "75%" },
   ]);
   //Sütun ayarları End
 
@@ -309,7 +286,7 @@ export default function StudentGrid({ rowItems }: Props) {
   const [pageSizes] = useState([5, 10, 20, 50]);
   const [currentPage, setCurrentPage] = useState(0);
   // Pagination Hook Ayarları End
-  
+
   const { user } = useAppSelector((state) => state.account);
 
   return (
@@ -346,14 +323,15 @@ export default function StudentGrid({ rowItems }: Props) {
         <FilteringState defaultFilters={[]} />
         <IntegratedFiltering />
         {user && user.roles?.includes("Admin") && (
-        <EditingState
-          editingRowIds={editingRowIds}
-          rowChanges={rowChanges}
-          onRowChangesChange={setRowChanges}
-          addedRows={addedRows}
-          onAddedRowsChange={changeAddedRows}
-          onCommitChanges={() => commitChanges}
-        />)}
+          <EditingState
+            editingRowIds={editingRowIds}
+            rowChanges={rowChanges}
+            onRowChangesChange={setRowChanges}
+            addedRows={addedRows}
+            onAddedRowsChange={changeAddedRows}
+            onCommitChanges={() => commitChanges}
+          />
+        )}
         <Table
           tableComponent={TableColorRowComponent}
           columnExtensions={tableColumnAlignmentExtensions}
@@ -380,7 +358,9 @@ export default function StudentGrid({ rowItems }: Props) {
           leftColumns={leftColumns}
           rightColumns={rightColumns}
         /> */}
-        <TableEditColumn showAddCommand showEditCommand showDeleteCommand />
+        {user && user.roles?.includes("Admin") && (
+          <TableEditColumn showAddCommand showEditCommand showDeleteCommand />
+        )}
       </Grid>
       <span>Total rows selected: {selection.length}</span>
       <GridExporter

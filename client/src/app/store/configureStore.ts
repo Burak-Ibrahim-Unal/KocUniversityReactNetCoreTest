@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { accountSlice } from "../../features/account/accountSlice";
+import { courseSlice } from "../../features/courses/courseSlice";
 import { studentSlice } from "../../features/student/studentSlice";
 
 
@@ -11,6 +12,7 @@ import { studentSlice } from "../../features/student/studentSlice";
 export const store = configureStore({
 reducer: {
         student: studentSlice.reducer,
+        course: courseSlice.reducer,
         account: accountSlice.reducer
     }
 })

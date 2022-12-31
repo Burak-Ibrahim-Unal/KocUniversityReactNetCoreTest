@@ -18,9 +18,11 @@ interface Props {
 }
 
 const midLinks = [
-  { title: "student", path: "/students" },
-  { title: "about", path: "/about" },
-  { title: "contact", path: "/contact" },
+  { title: "students", path: "/students" },
+  { title: "courses", path: "/courses" },
+  { title: "coursematches", path: "/coursematches" },
+  // { title: "about", path: "/about" },
+  // { title: "contact", path: "/contact" },
 ];
 
 const rightLinks = [

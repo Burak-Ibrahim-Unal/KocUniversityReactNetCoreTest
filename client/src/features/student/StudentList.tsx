@@ -5,7 +5,7 @@ import {
   fetchStudentsAsync,
   studentSelectors,
 } from "./studentSlice";
-import StudentGrid from "../../app/components/StudentList";
+import StudentGrid from "../../app/components/StudentGrid";
 
 //ilgili rowun idsimni tutan kod
 const getRowId = (row: any) => row.id;

@@ -72,7 +72,11 @@ const Student = {
     list: (params: URLSearchParams) => requests.get('students/getall', params),
     details: (id: number) => requests.get(`students/${id}`),
 }
-//http://localhost:5207/api/Students/getall?CurrentPage=1&PageSize=111
+
+const Course = {
+    list: (params: URLSearchParams) => requests.get('courses/getall', params),
+    details: (id: number) => requests.get(`courses/${id}`),
+}
 
 const TestErrors = {
     get400Error: () => requests.get('buggy/bad-request'),
@@ -90,6 +94,7 @@ const Account = {
 
 const agent = {
     Student,
+    Course,
     TestErrors,
     Account
 }
