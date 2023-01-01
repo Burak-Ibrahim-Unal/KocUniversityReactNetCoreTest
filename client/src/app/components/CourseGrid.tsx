@@ -6,7 +6,6 @@ import {
   PagingPanel,
   Table,
   TableHeaderRow,
-  TableEditColumn,
   Toolbar,
   ExportPanel,
   TableSelection,
@@ -20,7 +19,6 @@ import {
   DataTypeProvider,
   FilteringState,
   IntegratedFiltering,
-  EditingState,
 } from "@devexpress/dx-react-grid";
 import TableColorRowComponent from "./TableColorRow";
 import { SortingState, IntegratedSorting } from "@devexpress/dx-react-grid";
@@ -288,7 +286,7 @@ export default function CourseGrid({ rowItems }: Props) {
 
   return (
     <Paper>
-      <Grid rows={rowItems} columns={columns} getRowId={getRowId}>
+      <Grid rows={user ? rowItems : []} columns={columns} getRowId={getRowId}>
         <SelectionState
           selection={selection}
           onSelectionChange={setSelection}
@@ -319,16 +317,6 @@ export default function CourseGrid({ rowItems }: Props) {
         />
         <FilteringState defaultFilters={[]} />
         <IntegratedFiltering />
-        {user && user.roles?.includes("Admin") && (
-          <EditingState
-            editingRowIds={editingRowIds}
-            rowChanges={rowChanges}
-            onRowChangesChange={setRowChanges}
-            addedRows={addedRows}
-            onAddedRowsChange={changeAddedRows}
-            onCommitChanges={() => commitChanges}
-          />
-        )}
         <Table
           tableComponent={TableColorRowComponent}
           columnExtensions={tableColumnAlignmentExtensions}
@@ -347,13 +335,6 @@ export default function CourseGrid({ rowItems }: Props) {
         )} */}
         <Toolbar />
         <ExportPanel startExport={startExport} />
-        {/* <TableFixedColumns
-          leftColumns={leftColumns}
-          rightColumns={rightColumns}
-        /> */}
-        {user && user.roles?.includes("Admin") && (
-          <TableEditColumn showAddCommand showEditCommand showDeleteCommand />
-        )}
       </Grid>
       <span>Total rows selected: {selection.length}</span>
       <GridExporter

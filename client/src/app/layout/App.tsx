@@ -23,6 +23,8 @@ import LoadingComponent from "./LoadingComponent";
 import PrivateRoute from "./PrivateRoute";
 import "./styles.css";
 import "react-toastify/dist/ReactToastify.css";
+import CoursePanel from "../../features/admin/CoursePanel";
+import CourseMatchPanel from "../../features/admin/CourseMatchPanel";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -72,6 +74,8 @@ function App() {
           <Route exact path='/coursematches' component={CourseMatchList} />
           <Route path='/coursematches/:id' component={CourseMatchDetails} />
           <PrivateRoute path="/studentPanel" component={StudentPanel} />
+          <PrivateRoute path="/coursePanel" component={CoursePanel} />
+          <PrivateRoute path="/courseMatchPanel" component={CourseMatchPanel} />
           <Route path='/about' component={AboutPage} />
           <Route path='/contact' component={ContactPage} />
           <Route path='/server-error' component={ServerError} />

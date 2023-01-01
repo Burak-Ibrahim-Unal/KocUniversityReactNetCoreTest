@@ -7,11 +7,6 @@ import {
 } from "./courseSlice";
 import CourseGrid from "../../app/components/CourseGrid";
 
-//ilgili rowun idsimni tutan kod
-const getRowId = (row: any) => row.id;
-
-//const columnItems = course
-
 export default function CourseList() {
   const courses = useAppSelector(courseSelectors.selectAll);
   const { coursesLoaded } = useAppSelector(

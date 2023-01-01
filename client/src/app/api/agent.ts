@@ -92,9 +92,9 @@ const Admin = {
     createCourse: (product: any) => requests.postForm("Courses", createFormData(product)),
     updateCourse: (product: any) => requests.putForm("Courses", createFormData(product)),
     deleteCourse: (id: number) => requests.delete(`Courses/${id}`),
-    createcourseMatch: (product: any) => requests.postForm("CourseMatches", createFormData(product)),
-    updatecourseMatch: (product: any) => requests.putForm("CourseMatches", createFormData(product)),
-    deletecourseMatch: (id: number) => requests.delete(`CourseMatches/${id}`),
+    createCourseMatch: (product: any) => requests.postForm("CourseMatches", createFormData(product)),
+    updateCourseMatch: (product: any) => requests.putForm("CourseMatches", createFormData(product)),
+    deleteCourseMatch: (id: number) => requests.delete(`CourseMatches/${id}`),
 }
 
 function createFormData(item: any) {

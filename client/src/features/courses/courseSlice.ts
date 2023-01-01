@@ -67,7 +67,7 @@ export const courseSlice = createSlice({
             state.coursesLoaded = false;
             state.courseParams = { ...state.courseParams, ...action.payload, currentPage: 1 };
         },
-        setcurrentPage: (state, action) => {
+        setCurrentPage: (state, action) => {
             state.coursesLoaded = false;
             state.courseParams = { ...state.courseParams, ...action.payload };
         },
@@ -76,7 +76,15 @@ export const courseSlice = createSlice({
         },
         resetCourseParams: (state) => {
             state.courseParams = initParams();
-        }
+        },
+        setCourse: (state, action) => {
+            coursesAdapter.updateOne(state, action.payload);
+            state.coursesLoaded = false;
+        },
+        removeCourse: (state, action) => {
+            coursesAdapter.removeOne(state, action.payload);
+            state.coursesLoaded = false;
+        },
     },
     extraReducers: (builder => {
         builder.addCase(fetchCoursesAsync.pending, (state) => {
@@ -107,4 +115,4 @@ export const courseSlice = createSlice({
 
 export const courseSelectors = coursesAdapter.getSelectors((state: RootState) => state.course);
 
-export const { setCourseParams, resetCourseParams, setMetaData, setcurrentPage } = courseSlice.actions;
+export const { setCourseParams, resetCourseParams, setMetaData, setCurrentPage, setCourse, removeCourse } = courseSlice.actions;

@@ -1,7 +1,6 @@
 import { Button, Menu, Fade, MenuItem } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
-import { signOut } from "../../features/account/accountSlice";
 import { useAppDispatch, useAppSelector } from "../store/configureStore";
 
 export default function AdminMenu() {
@@ -32,10 +31,10 @@ export default function AdminMenu() {
         <MenuItem component={Link} to="/studentPanel" onClick={handleClose}>
           Student Panel
         </MenuItem>
-        <MenuItem component={Link} to="/studentPanel" onClick={handleClose}>
+        <MenuItem component={Link} to="/coursePanel" onClick={handleClose}>
           Course Panel
         </MenuItem>
-        <MenuItem component={Link} to="/studentPanel" onClick={handleClose}>
+        <MenuItem component={Link} to="/courseMatchPanel" onClick={handleClose}>
           Course Matches Panel
         </MenuItem>
       </Menu>

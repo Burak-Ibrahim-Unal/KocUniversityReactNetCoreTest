@@ -6,7 +6,6 @@ import {
   PagingPanel,
   Table,
   TableHeaderRow,
-  TableEditColumn,
   Toolbar,
   ExportPanel,
   TableSelection,
@@ -20,7 +19,6 @@ import {
   DataTypeProvider,
   FilteringState,
   IntegratedFiltering,
-  EditingState,
 } from "@devexpress/dx-react-grid";
 import TableColorRowComponent from "./TableColorRow";
 import { SortingState, IntegratedSorting } from "@devexpress/dx-react-grid";
@@ -41,8 +39,8 @@ const getRowId = (row: any) => row.id;
 //Tablo sütunları Start
 const columns = [
   //{ name: "id", title: "ID" },
-  { name: "studentFirstName", title: "Student First Name" },
-  { name: "studentLastName", title: "Student Last Name" },
+  { name: "studentFirstName", title: "First Name" },
+  { name: "studentLastName", title: "Last Name" },
   { name: "studentNumber", title: "Student Number" },
   { name: "courseId", title: "Course Id" },
   { name: "courseName", title: "Course Name" },
@@ -194,14 +192,23 @@ export default function CourseMatchGrid({ rowItems }: Props) {
     {
       columnName: "firstName",
       align: "left",
-      width: "25%",
+      width: "10%",
     },
-    { columnName: "lastName", align: "center", width: "25%" },
+    { columnName: "lastName", align: "center", width: "10%" },
     {
-      columnName: "courseMatchNumber",
+      columnName: "studentNumber",
       align: "left",
-      width: "25%",
-      wordWrapEnabled: false,
+      width: "15%",
+    },
+    {
+      columnName: "courseId",
+      align: "left",
+      width: "10%",
+    },
+    {
+      columnName: "courseName",
+      align: "center",
+      width: "30%",
     },
   ]);
   //Sütun ayarları End
@@ -309,7 +316,7 @@ export default function CourseMatchGrid({ rowItems }: Props) {
 
   return (
     <Paper>
-      <Grid rows={rowItems} columns={columns} getRowId={getRowId}>
+      <Grid rows={user ? rowItems : []} columns={columns} getRowId={getRowId}>
         <SelectionState
           selection={selection}
           onSelectionChange={setSelection}
@@ -340,16 +347,6 @@ export default function CourseMatchGrid({ rowItems }: Props) {
         />
         <FilteringState defaultFilters={[]} />
         <IntegratedFiltering />
-        {user && user.roles?.includes("Admin") && (
-          <EditingState
-            editingRowIds={editingRowIds}
-            rowChanges={rowChanges}
-            onRowChangesChange={setRowChanges}
-            addedRows={addedRows}
-            onAddedRowsChange={changeAddedRows}
-            onCommitChanges={() => commitChanges}
-          />
-        )}
         <Table
           tableComponent={TableColorRowComponent}
           columnExtensions={tableColumnAlignmentExtensions}
@@ -372,9 +369,6 @@ export default function CourseMatchGrid({ rowItems }: Props) {
           leftColumns={leftColumns}
           rightColumns={rightColumns}
         /> */}
-        {user && user.roles?.includes("Admin") && (
-          <TableEditColumn showAddCommand showEditCommand showDeleteCommand />
-        )}
       </Grid>
       <span>Total rows selected: {selection.length}</span>
       <GridExporter

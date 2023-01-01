@@ -4,21 +4,22 @@ import { useForm } from "react-hook-form";
 import { FieldValues } from "react-hook-form/dist/types";
 import { AppSelectList } from "../../app/components/AppSelectList";
 import AppTextInput from "../../app/components/AppTextInput";
-import { Student } from "../../app/models/student";
+import useCourses from "../../app/hooks/useCourses";
+import { Course } from "../../app/models/course";
 import { yupResolver } from "@hookform/resolvers/yup";
 import agent from "../../app/api/agent";
 import { useAppDispatch } from "../../app/store/configureStore";
 import { LoadingButton } from "@mui/lab";
-import { setStudent } from "../student/studentSlice";
-import { validationSchema } from "./studentValidation";
+import { validationSchema } from "./courseValidation";
 import { toast } from "react-toastify";
+import { setCourse } from "../courses/courseSlice";
 
 interface Props {
-  student?: Student;
+  course?: Course;
   cancelEdit: () => void;
 }
 
-export default function StudentForm({ student, cancelEdit }: Props) {
+export default function CourseForm({ course, cancelEdit }: Props) {
   const {
     control,
     reset,
@@ -32,53 +33,49 @@ export default function StudentForm({ student, cancelEdit }: Props) {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    if (student && !watchFile && !isDirty) reset(student);
+    if (course && !watchFile && !isDirty) reset(course);
     return () => {
       if (watchFile) URL.revokeObjectURL(watchFile.preview);
     };
-  }, [student, reset, watchFile, isDirty]);
+  }, [course, reset, watchFile, isDirty]);
 
   async function handleSubmitData(data: FieldValues) {
     try {
-      let response: Student;
-      if (student) {
-        response = await agent.Admin.updateStudent(data);
-        toast.success("Student updated successfully");
+      let response: Course;
+      if (course) {
+        response = await agent.Admin.updateCourse(data);
+        toast.success("Course updated successfully");
       } else {
-        response = await agent.Admin.createStudent(data);
-        toast.success("Student added successfully");
+        response = await agent.Admin.createCourse(data);
+        toast.success("Course added successfully");
       }
-      dispatch(setStudent(response));
+      dispatch(setCourse(response));
       cancelEdit();
     } catch (error: any) {
       toast.error(error.response.data.Detail);
-      console.log(error);
     }
   }
 
   return (
     <Box component={Paper} sx={{ p: 4 }}>
       <Typography variant="h4" gutterBottom sx={{ mb: 4 }}>
-        Student Details
+        Course Details
       </Typography>
       <form onSubmit={handleSubmit(handleSubmitData)}>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={12}>
+          <Grid item xs={12} sm={6}>
             <AppTextInput
               control={control}
-              name="studentNumber"
-              label="Student Number"
+              name="courseId"
+              label="Course Id"
             />
           </Grid>
           <Grid item xs={12} sm={6}>
             <AppTextInput
               control={control}
-              name="firstName"
-              label="First Name"
+              name="courseName"
+              label="Course Name"
             />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <AppTextInput control={control} name="lastName" label="Last Name" />
           </Grid>
         </Grid>
         <Box display="flex" justifyContent="space-between" sx={{ mt: 3 }}>

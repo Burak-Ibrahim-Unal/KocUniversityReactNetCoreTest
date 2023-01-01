@@ -11,61 +11,61 @@ import {
   Box,
 } from "@mui/material";
 import { Edit, Delete } from "@mui/icons-material";
-import useStudents from "../../app/hooks/useStudents";
 import AppPagination from "../../app/components/AppPagination";
 import { useAppDispatch } from "../../app/store/configureStore";
 import { useState } from "react";
-import StudentForm from "./StudentForm";
-import { Student } from "../../app/models/student";
+import CourseMatchForm from "./CourseMatchForm";
+import { CourseMatch } from "../../app/models/courseMatch";
 import agent from "../../app/api/agent";
 import { LoadingButton } from "@mui/lab";
-import { removeStudent, setCurrentPage } from "../student/studentSlice";
+import useCourseMatches from "../../app/hooks/useCourseMatches";
+import { removeCourseMatch, setCurrentPage } from "../courseMatch/courseMatchSlice";
 import { toast } from "react-toastify";
 
-export default function StudentPanel() {
-  const { students, metaData } = useStudents();
+export default function CourseMatchPanel() {
+  const { courseMatches, metaData } = useCourseMatches();
   const [editMode, setEditMode] = useState(false);
-  const [selectedStudent, setSelectedStudent] = useState<Student | undefined>(
+  const [selectedCourseMatch, setSelectedCourseMatch] = useState<CourseMatch | undefined>(
     undefined
   );
   const [loading, setLoading] = useState(false);
   const [target, setTarget] = useState(0);
   const dispatch = useAppDispatch();
 
-  function handleSelectStudent(student: Student) {
-    setSelectedStudent(student);
+  function handleSelectCourseMatch(courseMatch: CourseMatch) {
+    setSelectedCourseMatch(courseMatch);
     setEditMode(true);
   }
 
-  function handleDeleteStudent(id: number) {
+  function handleDeleteCourseMatch(id: number) {
     setLoading(true);
     setTarget(id);
     console.log(target);
-    agent.Admin.deleteStudent(id)
-      .then(() => {
-        dispatch(removeStudent(id));
-        toast.success("Student removed successfully");
-      })
-      .catch((error) => {
-        console.log(error);
-        toast.success(error.response.data.Detail);
-      })
+    agent.Admin.deleteCourseMatch(id)
+    .then(() => {
+      dispatch(removeCourseMatch(id));
+      toast.success("Course Match removed successfully");
+    })
+    .catch((error) => {
+      console.log(error);
+      toast.success(error.response.data.Detail);
+    })
       .finally(() => setLoading(false));
   }
 
   function cancelEdit() {
-    if (selectedStudent) setSelectedStudent(undefined);
+    if (selectedCourseMatch) setSelectedCourseMatch(undefined);
     setEditMode(false);
   }
 
   if (editMode)
-    return <StudentForm student={selectedStudent} cancelEdit={cancelEdit} />;
+    return <CourseMatchForm courseMatch={selectedCourseMatch} cancelEdit={cancelEdit} />;
 
   return (
     <>
       <Box display="flex" justifyContent="space-between">
         <Typography sx={{ p: 2 }} variant="h4">
-          Student Affairs
+          Course Match Affairs
         </Typography>
         <Button
           onClick={() => setEditMode(true)}
@@ -84,29 +84,33 @@ export default function StudentPanel() {
               <TableCell align="center">Student Number</TableCell>
               <TableCell align="center">First Name</TableCell>
               <TableCell align="center">Last Name</TableCell>
+              <TableCell align="center">Course Id</TableCell>
+              <TableCell align="center">Course Name</TableCell>
               <TableCell align="center">Edit</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {students.map((student) => (
+            {courseMatches.map((courseMatch) => (
               <TableRow
-                key={student.id}
+                key={courseMatch.id}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell component="th" scope="row">
-                  {student.id}
+                  {courseMatch.id}
                 </TableCell>
-                <TableCell align="center">{student.studentNumber}</TableCell>
-                <TableCell align="center">{student.firstName}</TableCell>
-                <TableCell align="center">{student.lastName}</TableCell>
+                <TableCell align="center">{courseMatch.studentNumber}</TableCell>
+                <TableCell align="center">{courseMatch.studentFirstName}</TableCell>
+                <TableCell align="center">{courseMatch.studentLastName}</TableCell>
+                <TableCell align="center">{courseMatch.courseId}</TableCell>
+                <TableCell align="center">{courseMatch.courseName}</TableCell>
                 <TableCell align="center">
                   <Button
-                    onClick={() => handleSelectStudent(student)}
+                    onClick={() => handleSelectCourseMatch(courseMatch)}
                     startIcon={<Edit />}
                   />
                   <LoadingButton
-                    loading={loading && target === student.id}
-                    onClick={() => handleDeleteStudent(student.id)}
+                    loading={loading && target === courseMatch.id}
+                    onClick={() => handleDeleteCourseMatch(courseMatch.id)}
                     startIcon={<Delete />}
                     color="error"
                   />

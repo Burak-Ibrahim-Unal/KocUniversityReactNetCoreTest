@@ -67,7 +67,7 @@ export const courseMatchSlice = createSlice({
             state.courseMatchesLoaded = false;
             state.courseMatchParams = { ...state.courseMatchParams, ...action.payload, currentPage: 1 };
         },
-        setcurrentPage: (state, action) => {
+        setCurrentPage: (state, action) => {
             state.courseMatchesLoaded = false;
             state.courseMatchParams = { ...state.courseMatchParams, ...action.payload };
         },
@@ -76,7 +76,15 @@ export const courseMatchSlice = createSlice({
         },
         resetCourseMatchParams: (state) => {
             state.courseMatchParams = initParams();
-        }
+        },
+        setCourseMatch: (state, action) => {
+            courseMatchesAdapter.updateOne(state, action.payload);
+            state.courseMatchesLoaded = false;
+        },
+        removeCourseMatch: (state, action) => {
+            courseMatchesAdapter.removeOne(state, action.payload);
+            state.courseMatchesLoaded = false;
+        },
     },
     extraReducers: (builder => {
         builder.addCase(fetchCourseMatchesAsync.pending, (state) => {
@@ -107,4 +115,4 @@ export const courseMatchSlice = createSlice({
 
 export const courseMatchSelectors = courseMatchesAdapter.getSelectors((state: RootState) => state.courseMatch);
 
-export const { setCourseMatchParams, resetCourseMatchParams, setMetaData, setcurrentPage } = courseMatchSlice.actions;
+export const { setCourseMatchParams, resetCourseMatchParams, setMetaData, setCurrentPage, setCourseMatch, removeCourseMatch } = courseMatchSlice.actions;
