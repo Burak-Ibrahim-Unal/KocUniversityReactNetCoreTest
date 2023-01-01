@@ -19,7 +19,7 @@ namespace API.Controllers
             return Ok(result);
         }
 
-        [HttpGet("getall")]
+        [HttpGet]
         public async Task<ActionResult<PagedList<CourseMatch>>> GetAll([FromQuery] PageRequest pageRequest)
         {
             GetCourseMatchListQuery getCourseMatchListQuery = new() { pageRequest = pageRequest };
@@ -28,7 +28,7 @@ namespace API.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [HttpPost("add")]
+        [HttpPost]
         public async Task<IActionResult> Add([FromBody] CreateCourseMatchCommand createCourseMatchCommand)
         {
             var result = await Mediator.Send(createCourseMatchCommand);
@@ -36,7 +36,7 @@ namespace API.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [HttpPut("update")]
+        [HttpPut]
         public async Task<IActionResult> Update([FromBody] UpdateCourseMatchCommand updateCourseMatchCommand)
         {
             var result = await Mediator.Send(updateCourseMatchCommand);
