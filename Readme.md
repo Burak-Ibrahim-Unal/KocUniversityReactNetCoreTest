@@ -9,7 +9,7 @@
 This project is made with Net Core and Angular.
 	
 ## Technologies
-Project is created with: (Net Core 6 CQRS Architecture- React 17)
+Project is created with: (Net Core 6 CQRS Architecture- React 17 Redux Hook)
 * React Typescript 17.0.2
 * Net Core: 6.0.12
 * Nodejs : 16.18.x
