@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { Link, NavLink } from "react-router-dom";
 import { useAppSelector } from "../store/configureStore";
+import AdminMenu from "./AdminMenu";
 import DarkModeSwitch from "./DarkModeSwitch";
 import SignedInMenu from "./SignedInMenu";
 
@@ -21,8 +22,6 @@ const midLinks = [
   { title: "students", path: "/students" },
   { title: "courses", path: "/courses" },
   { title: "coursematches", path: "/coursematches" },
-  // { title: "about", path: "/about" },
-  // { title: "contact", path: "/contact" },
 ];
 
 const rightLinks = [
@@ -44,6 +43,9 @@ const navStyles = {
 
 export default function Header({ darkMode, handleDarkThemeChange }: Props) {
   const { user } = useAppSelector((state: any) => state.account);
+  // if (user && user.roles?.includes("Admin")) {
+  //   midLinks.push({ title: "adminPanel", path: "/adminPanel" });
+  // }
 
   return (
     <AppBar position="static" sx={{ mb: 4 }}>
@@ -71,19 +73,13 @@ export default function Header({ darkMode, handleDarkThemeChange }: Props) {
               {title.toUpperCase()}
             </ListItem>
           ))}
+          <AdminMenu />
         </List>
         <Box display="flex" alignItems="center">
           <DarkModeSwitch
             darkMode={darkMode}
             handleDarkThemeChange={handleDarkThemeChange}
           />
-          <IconButton
-            component={Link}
-            to="/basket"
-            size="large"
-            sx={{ color: "inherit" }}
-          >
-          </IconButton>
           {user ? (
             <SignedInMenu />
           ) : (

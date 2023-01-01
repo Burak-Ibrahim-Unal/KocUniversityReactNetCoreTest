@@ -14,7 +14,7 @@ const responseBody = (response: AxiosResponse) => response.data;
 axios.interceptors.request.use(config => {
     const token = store.getState().account.user?.token;
     // if (token) config.headers!.Authorization = `Bearer ${token}`;
-    if (token) axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem('token')}`;
+    if (token) axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
     return config;
 })
 

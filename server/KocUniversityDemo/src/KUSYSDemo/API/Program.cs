@@ -93,13 +93,15 @@ builder.Services.AddLogging(config =>
 });
 
 // Prevents to loop to invoke another request
-builder.Services.AddControllers().AddNewtonsoftJson(options =>
-{
-    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
-    options.SerializerSettings.DateFormatString = "yyyy-MM-ddTHH:mm:ssZ";
-    options.SerializerSettings.Formatting = Formatting.Indented;
-    options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-});
+//builder.Services.AddMvc().AddNewtonsoftJson().AddNewtonsoftJson(options =>
+//{
+//    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+//    options.SerializerSettings.DateFormatString = "yyyy-MM-ddTHH:mm:ssZ";
+//    options.SerializerSettings.Formatting = Formatting.Indented;
+//    options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+//});
+
+//builder.Services.AddMvc().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
 
 var app = builder.Build();
 

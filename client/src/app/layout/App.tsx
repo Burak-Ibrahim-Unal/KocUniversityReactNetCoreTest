@@ -6,6 +6,7 @@ import AboutPage from "../../features/about/AboutPage";
 import { fetchCurrentUser } from "../../features/account/accountSlice";
 import Login from "../../features/account/Login";
 import Register from "../../features/account/Register";
+import StudentPanel from "../../features/admin/StudentPanel";
 import ContactPage from "../../features/Contact/Contact";
 import CourseMatchDetails from "../../features/courseMatch/CourseMatchDetails";
 import CourseMatchList from "../../features/courseMatch/CourseMatchList";
@@ -19,6 +20,7 @@ import ServerError from "../errors/ServerError";
 import { useAppDispatch } from "../store/configureStore";
 import Header from "./Header";
 import LoadingComponent from "./LoadingComponent";
+import PrivateRoute from "./PrivateRoute";
 import "./styles.css";
 
 function App() {
@@ -68,6 +70,7 @@ function App() {
           <Route path='/courses/:id' component={CourseDetails} />
           <Route exact path='/coursematches' component={CourseMatchList} />
           <Route path='/coursematches/:id' component={CourseMatchDetails} />
+          <PrivateRoute path="/studentPanel" component={StudentPanel} />
           <Route path='/about' component={AboutPage} />
           <Route path='/contact' component={ContactPage} />
           <Route path='/server-error' component={ServerError} />
