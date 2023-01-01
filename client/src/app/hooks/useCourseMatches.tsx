@@ -12,7 +12,7 @@ export default function useCourseMatches() {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    if (!courseMatchesLoaded) dispatch(fetchCourseMatchesAsync());
+    dispatch(fetchCourseMatchesAsync());
   }, [courseMatchesLoaded, dispatch]);
 
   return {

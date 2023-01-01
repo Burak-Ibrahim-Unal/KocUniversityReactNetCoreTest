@@ -1,0 +1,12 @@
+Admin
+{
+  "username": "Burak",
+  "password": "Burak1234!"
+}
+
+
+User
+{
+  "username": "testuser",
+  "password": "Burak1234!"
+}
