@@ -39,7 +39,6 @@ export default function StudentPanel() {
   function handleDeleteStudent(id: number) {
     setLoading(true);
     setTarget(id);
-    console.log(target);
     agent.Admin.deleteStudent(id)
       .then(() => dispatch(removeStudent(id)))
       .catch((error) => console.log(error))
@@ -77,7 +76,7 @@ export default function StudentPanel() {
               <TableCell align="center">Student Number</TableCell>
               <TableCell align="center">First Name</TableCell>
               <TableCell align="center">Last Name</TableCell>
-              <TableCell align="right"></TableCell>
+              <TableCell align="center">Edit</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -92,7 +91,7 @@ export default function StudentPanel() {
                 <TableCell align="center">{student.studentNumber}</TableCell>
                 <TableCell align="center">{student.firstName}</TableCell>
                 <TableCell align="center">{student.lastName}</TableCell>
-                <TableCell align="right">
+                <TableCell align="center">
                   <Button
                     onClick={() => handleSelectStudent(student)}
                     startIcon={<Edit />}

@@ -12,6 +12,7 @@ import { useAppDispatch } from "../../app/store/configureStore";
 import { LoadingButton } from "@mui/lab";
 import { setStudent } from "../student/studentSlice";
 import { validationSchema } from "./studentValidation";
+import { toast } from "react-toastify";
 
 interface Props {
   student?: Student;
@@ -39,13 +40,14 @@ export default function StudentForm({ student, cancelEdit }: Props) {
   }, [student, reset, watchFile, isDirty]);
 
   async function handleSubmitData(data: FieldValues) {
-    console.log(data);
     try {
       let response: Student;
       if (student) {
         response = await agent.Admin.updateStudent(data);
+        toast.success("New student added successfully");
       } else {
         response = await agent.Admin.createStudent(data);
+        toast.error("Error occured...Student is not created");
       }
       dispatch(setStudent(response));
       cancelEdit();
@@ -62,7 +64,11 @@ export default function StudentForm({ student, cancelEdit }: Props) {
       <form onSubmit={handleSubmit(handleSubmitData)}>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={12}>
-            <AppTextInput control={control} name="name" label="Student name" />
+            <AppTextInput
+              control={control}
+              name="studentNumber"
+              label="Student Number"
+            />
           </Grid>
           <Grid item xs={12} sm={6}>
             <AppTextInput

@@ -78,10 +78,10 @@ const requests = {
     put: (url: string, body: {}) => axios.put(url, body).then(responseBody),
     delete: (url: string) => axios.delete(url).then(responseBody),
     postForm: (url: string, data: FormData) => axios.post(url, data, {
-        headers: { "Content-type": "multipart/form-data" }
+        headers: { "Content-type": "application/json" }
     }).then(responseBody),
     putForm: (url: string, data: FormData) => axios.put(url, data, {
-        headers: { "Content-type": "multipart/form-data" }
+        headers: { "Content-type": "application/json" }
     }).then(responseBody),
 }
 

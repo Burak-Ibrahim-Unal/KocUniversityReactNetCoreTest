@@ -28,7 +28,6 @@ export const fetchCoursesAsync = createAsyncThunk<Course[], void, { state: RootS
         try {
             const response = await agent.Course.list(params);
             thunkAPI.dispatch(setMetaData(response.metaData));
-            console.log(response.metaData);
             return response.items;
         } catch (error: any) {
             return thunkAPI.rejectWithValue({ error: error.data })

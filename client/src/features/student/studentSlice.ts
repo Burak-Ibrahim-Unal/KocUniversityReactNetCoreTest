@@ -28,7 +28,6 @@ export const fetchStudentsAsync = createAsyncThunk<Student[], void, { state: Roo
         try {
             const response = await agent.Student.list(params);
             thunkAPI.dispatch(setMetaData(response.metaData));
-            console.log(response.metaData);
             return response.items;
         } catch (error: any) {
             return thunkAPI.rejectWithValue({ error: error.data })

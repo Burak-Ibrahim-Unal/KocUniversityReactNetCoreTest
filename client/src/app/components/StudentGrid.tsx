@@ -54,7 +54,7 @@ const getRowId = (row: any) => row.id;
 const columns = [
   //{ name: "id", title: "ID" },
   { name: "studentNumber", title: "Student Number" },
-  { name: "firstName", title: "Student Name" },
+  { name: "firstName", title: "Student First Name" },
   { name: "lastName", title: "Student Last Name" },
 ];
 //Tablo sütunları End

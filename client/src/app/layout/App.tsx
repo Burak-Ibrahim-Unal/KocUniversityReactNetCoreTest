@@ -22,6 +22,7 @@ import Header from "./Header";
 import LoadingComponent from "./LoadingComponent";
 import PrivateRoute from "./PrivateRoute";
 import "./styles.css";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -58,7 +59,7 @@ function App() {
   
   return (
     <ThemeProvider theme={theme}>
-      <ToastContainer position='bottom-right' hideProgressBar theme='colored' />
+      <ToastContainer position='bottom-center' hideProgressBar theme='colored'/>
       <CssBaseline />
       <Header darkMode={darkMode} handleDarkThemeChange={handleDarkThemeChange} />
       <Container>

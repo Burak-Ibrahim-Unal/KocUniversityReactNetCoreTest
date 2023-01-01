@@ -48,15 +48,15 @@ export default function StudentDetails() {
           <Table>
             <TableBody>
               <TableRow>
-                <TableCell>Type</TableCell>
+                <TableCell>Student Number</TableCell>
                 <TableCell>{student.studentNumber}</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>Name</TableCell>
+                <TableCell>First Name</TableCell>
                 <TableCell>{student.firstName}</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>Description</TableCell>
+                <TableCell>Last Name</TableCell>
                 <TableCell>{student.lastName}</TableCell>
               </TableRow>
             </TableBody>
