@@ -44,14 +44,15 @@ export default function StudentForm({ student, cancelEdit }: Props) {
       let response: Student;
       if (student) {
         response = await agent.Admin.updateStudent(data);
-        toast.success("New student added successfully");
+        toast.success("Student updated successfully");
       } else {
         response = await agent.Admin.createStudent(data);
-        toast.error("Error occured...Student is not created");
+        toast.success("Student added successfully");
       }
       dispatch(setStudent(response));
       cancelEdit();
-    } catch (error) {
+    } catch (error: any) {
+      toast.error(error.response.data.Detail);
       console.log(error);
     }
   }
@@ -78,18 +79,19 @@ export default function StudentForm({ student, cancelEdit }: Props) {
             />
           </Grid>
           <Grid item xs={12} sm={6}>
-            <AppTextInput
-              control={control}
-              name="lastName"
-              label="Last Name"
-            />
+            <AppTextInput control={control} name="lastName" label="Last Name" />
           </Grid>
         </Grid>
         <Box display="flex" justifyContent="space-between" sx={{ mt: 3 }}>
           <Button onClick={cancelEdit} variant="contained" color="inherit">
             Cancel
           </Button>
-          <LoadingButton loading={isSubmitting} type="submit" variant="contained" color="success">
+          <LoadingButton
+            loading={isSubmitting}
+            type="submit"
+            variant="contained"
+            color="success"
+          >
             Submit
           </LoadingButton>
         </Box>
