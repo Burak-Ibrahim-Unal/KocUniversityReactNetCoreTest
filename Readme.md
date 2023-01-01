@@ -18,18 +18,7 @@ Project is created with: (Net Core 6 CQRS Architecture- React 17)
 * Visual Studio 2022 - Net SDK6.0
 	
 ## Setup 
-To run this project's,first create your free Cloudinary account from [here](https://cloudinary.com/console/c-409de846ac7abee975808cc197afe7/)
-Than add your informations in appsettings.json file:
-
-```
-  "CloudinarySettings": {
-    "CloudName": "xxxxx",
-    "ApiKey" : "xxxxx",
-    "ApiSecret" : "xxxxx"
-  },
-```
-
-After installing Docker Desktop,open cmd and run this command for Postgresql
+To run this project's,firstly install Docker Desktop,open cmd and run this command for Postgresql
 
 ```
 $ docker run --name dev -e POSTGRES_USER=appuser -e POSTGRES_PASSWORD=secret -p 5432:5432 -d postgres:latest
