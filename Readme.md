@@ -29,13 +29,13 @@ Than add your informations in appsettings.json file:
   },
 ```
 
-After installing Docker Desktop run this command for Postgresql
+After installing Docker Desktop,open cmd and run this command for Postgresql
 
 ```
-docker run --name dev -e POSTGRES_USER=appuser -e POSTGRES_PASSWORD=secret -p 5432:5432 -d postgres:latest
+$ docker run --name dev -e POSTGRES_USER=appuser -e POSTGRES_PASSWORD=secret -p 5432:5432 -d postgres:latest
 ```
 
-Frontend build files implemented into wwwroot folder in Backend... After start backend with Visual Studio,just connect http://localhost:5207/ 
+Optional: Frontend build files implemented into wwwroot folder in Backend... After start backend with Visual Studio,just connect http://localhost:5207/ 
 (or To run this project's frontend side, install it locally using:)
 
 ```
