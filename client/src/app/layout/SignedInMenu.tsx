@@ -30,8 +30,8 @@ export default function SignedInMenu() {
                 onClose={handleClose}
                 TransitionComponent={Fade}
             >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My orders</MenuItem>
+                <MenuItem onClick={handleClose}>Test Menu 1</MenuItem>
+                <MenuItem onClick={handleClose}>Test Menu 2</MenuItem>
                 <MenuItem onClick={() => {
                     dispatch(signOut());
                 }}>Logout</MenuItem>
