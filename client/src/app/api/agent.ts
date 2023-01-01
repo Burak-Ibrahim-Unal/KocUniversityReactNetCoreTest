@@ -86,14 +86,14 @@ const requests = {
 }
 
 const Admin = {
-    createStudent: (product: any) => requests.postForm("Students/add", createFormData(product)),
-    updateStudent: (product: any) => requests.putForm("Students/update", createFormData(product)),
-    deleteStudent: (id: number) => requests.delete(`Student//${id}`),
-    createCourse: (product: any) => requests.postForm("Courses/add", createFormData(product)),
-    updateCourse: (product: any) => requests.putForm("Courses/update", createFormData(product)),
+    createStudent: (product: any) => requests.postForm("Students", createFormData(product)),
+    updateStudent: (product: any) => requests.putForm("Students", createFormData(product)),
+    deleteStudent: (id: number) => requests.delete(`Students/${id}`),
+    createCourse: (product: any) => requests.postForm("Courses", createFormData(product)),
+    updateCourse: (product: any) => requests.putForm("Courses", createFormData(product)),
     deleteCourse: (id: number) => requests.delete(`Courses/${id}`),
-    createcourseMatch: (product: any) => requests.postForm("CourseMatches/add", createFormData(product)),
-    updatecourseMatch: (product: any) => requests.putForm("CourseMatches/update", createFormData(product)),
+    createcourseMatch: (product: any) => requests.postForm("CourseMatches", createFormData(product)),
+    updatecourseMatch: (product: any) => requests.putForm("CourseMatches", createFormData(product)),
     deletecourseMatch: (id: number) => requests.delete(`CourseMatches/${id}`),
 }
 
@@ -106,17 +106,17 @@ function createFormData(item: any) {
 }
 
 const Student = {
-    list: (params: URLSearchParams) => requests.get('students/getall', params),
+    list: (params: URLSearchParams) => requests.get('students', params),
     details: (id: number) => requests.get(`students/${id}`),
 }
 
 const Course = {
-    list: (params: URLSearchParams) => requests.get('courses/getall', params),
+    list: (params: URLSearchParams) => requests.get('courses', params),
     details: (id: number) => requests.get(`courses/${id}`),
 }
 
 const CourseMatch = {
-    list: (params: URLSearchParams) => requests.get('courseMatches/getall', params),
+    list: (params: URLSearchParams) => requests.get('courseMatches', params),
     details: (id: number) => requests.get(`courseMatches/${id}`),
 }
 

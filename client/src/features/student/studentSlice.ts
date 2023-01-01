@@ -77,7 +77,15 @@ export const studentSlice = createSlice({
         },
         resetStudentParams: (state) => {
             state.studentParams = initParams();
-        }
+        },
+        setStudent: (state, action) => {
+            studentsAdapter.updateOne(state, action.payload);
+            state.studentsLoaded = false;
+        },
+        removeStudent: (state, action) => {
+            studentsAdapter.removeOne(state, action.payload);
+            state.studentsLoaded = false;
+        },
     },
     extraReducers: (builder => {
         builder.addCase(fetchStudentsAsync.pending, (state) => {
@@ -108,4 +116,4 @@ export const studentSlice = createSlice({
 
 export const studentSelectors = studentsAdapter.getSelectors((state: RootState) => state.student);
 
-export const { setStudentParams, resetStudentParams, setMetaData, setcurrentPage } = studentSlice.actions;
+export const { setStudentParams, resetStudentParams, setMetaData, setcurrentPage, setStudent, removeStudent } = studentSlice.actions;

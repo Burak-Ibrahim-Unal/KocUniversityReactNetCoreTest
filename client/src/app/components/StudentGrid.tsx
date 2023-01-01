@@ -43,6 +43,9 @@ import { TableCell, Button } from "@mui/material";
 import useStudents from "../hooks/useStudents";
 import { Student } from "../models/student";
 import agent from "../api/agent";
+export interface Props {
+  rowItems: any[];
+}
 
 //ilgili rowun idsimni tutan kod
 const getRowId = (row: any) => row.id;
@@ -186,7 +189,7 @@ const onSave = (workbook: any) => {
   
   
 
-export default function StudentGrid() {
+export default function StudentGrid({ rowItems }: Props) {
   const { students, metaData } = useStudents();
   const [editMode, setEditMode] = useState(false);
   const [selectedStudent, setSelectedStudent] = useState<Student | undefined>(
@@ -197,24 +200,6 @@ export default function StudentGrid() {
   const dispatch = useAppDispatch();
   const { studentsLoaded } = useAppSelector((state) => state.student);
 
-  function handleSelectStudent(student: Student) {
-    setSelectedStudent(student);
-    setEditMode(true);
-  }
-
-  function handleDeleteStudent(id: number) {
-    setLoading(true);
-    setTarget(id);
-    agent.Admin.deleteStudent(id)
-      .then(() => dispatch(removeStudent(id)))
-      .catch((error) => console.log(error))
-      .finally(() => setLoading(false));
-  }
-
-  function cancelEdit() {
-    if (selectedStudent) setSelectedStudent(undefined);
-    setEditMode(false);
-  }
 
   useEffect(() => {
     if (!studentsLoaded) {
@@ -367,20 +352,7 @@ export default function StudentGrid() {
         <Table
           tableComponent={TableColorRowComponent}
           columnExtensions={tableColumnAlignmentExtensions}
-        >
-          <TableCell align="right">
-            <Button
-              onClick={() => handleSelectStudent(student)}
-              startIcon={<Edit />}
-            />
-            <LoadingButton
-              loading={loading && target === student.id}
-              onClick={() => handleDeleteStudent(student.id)}
-              startIcon={<Delete />}
-              color="error"
-            />
-          </TableCell>
-        </Table>
+        />
         <TableFilterRow showFilterSelector />
         <TableHeaderRow showSortingControls />
         <PagingPanel pageSizes={pageSizes} />
@@ -395,10 +367,6 @@ export default function StudentGrid() {
         )} */}
         <Toolbar />
         <ExportPanel startExport={startExport} />
-        {/* <TableFixedColumns
-          leftColumns={leftColumns}
-          rightColumns={rightColumns}
-        /> */}
         {user && user.roles?.includes("Admin") && (
           <TableEditColumn showAddCommand showEditCommand showDeleteCommand />
         )}

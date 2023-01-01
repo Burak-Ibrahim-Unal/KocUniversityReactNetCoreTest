@@ -2,7 +2,6 @@ import { Typography, Grid, Paper, Box, Button } from "@mui/material";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { FieldValues } from "react-hook-form/dist/types";
-import AppDropzone from "../../app/components/AppDropzone";
 import { AppSelectList } from "../../app/components/AppSelectList";
 import AppTextInput from "../../app/components/AppTextInput";
 import useStudents from "../../app/hooks/useStudents";
@@ -11,8 +10,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { validationSchema } from "./studentValidation";
 import agent from "../../app/api/agent";
 import { useAppDispatch } from "../../app/store/configureStore";
-import { setStudent } from "../catalog/catalogSlice";
 import { LoadingButton } from "@mui/lab";
+import { setStudent } from "./studentSlice";
 
 interface Props {
   student?: Student;
@@ -29,7 +28,6 @@ export default function StudentForm({ student, cancelEdit }: Props) {
   } = useForm({
     resolver: yupResolver(validationSchema),
   });
-  const { brands, types } = useStudents();
   const watchFile = watch("file", null);
   const dispatch = useAppDispatch();
 
@@ -65,22 +63,6 @@ export default function StudentForm({ student, cancelEdit }: Props) {
         <Grid container spacing={3}>
           <Grid item xs={12} sm={12}>
             <AppTextInput control={control} name="name" label="Student name" />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <AppSelectList
-              control={control}
-              items={brands}
-              name="firstName"
-              label="First Name"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <AppSelectList
-              control={control}
-              items={types}
-              name="type"
-              label="Type"
-            />
           </Grid>
           <Grid item xs={12} sm={6}>
             <AppTextInput
