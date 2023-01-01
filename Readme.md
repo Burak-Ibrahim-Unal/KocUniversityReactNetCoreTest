@@ -1,4 +1,4 @@
-# Friendship Web App Codes 2022 Edition
+# Koc University Test Web App Codes 2023 Edition
 
 ## Table of contents
 * [General info](#general-info)
