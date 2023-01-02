@@ -35,6 +35,20 @@ namespace Persistence.Repositories
 
             return Task.FromResult(result.FirstOrDefault());
         }
+        public Task<CourseDto> GetCourseByCourseId(string courseId, CancellationToken cancellationToken = default)
+        {
+            var result = from course in Context.Courses
+                         where course.CourseId == courseId
+
+                         select new CourseDto
+                         {
+                             Id = course.Id,
+                             CourseId = course.CourseId,
+                             CourseName = course.CourseName,
+                         };
+
+            return Task.FromResult(result.FirstOrDefault());
+        }
 
         public async Task<PagedList<CourseListDto>> GetAllCourses(int index = 1, int size = 10, CancellationToken cancellationToken = default)
         {
@@ -48,5 +62,7 @@ namespace Persistence.Repositories
                          };
             return await PagedList<CourseListDto>.ToPageListAsync(result, index, size);
         }
+
+
     }
 }

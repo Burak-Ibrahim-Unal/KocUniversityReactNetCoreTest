@@ -44,6 +44,7 @@ export default function CourseForm({ course, cancelEdit }: Props) {
       let response: Course;
       if (course) {
         response = await agent.Admin.updateCourse(data);
+        console.log(response);
         toast.success("Course updated successfully");
       } else {
         response = await agent.Admin.createCourse(data);

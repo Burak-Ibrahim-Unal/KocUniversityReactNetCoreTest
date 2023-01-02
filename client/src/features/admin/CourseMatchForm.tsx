@@ -12,6 +12,7 @@ import { LoadingButton } from "@mui/lab";
 import { validationSchema } from "./courseMatchValidation";
 import { toast } from "react-toastify";
 import { setCourseMatch } from "../courseMatch/courseMatchSlice";
+import useStudents from "../../app/hooks/useStudents";
 
 interface Props {
   courseMatch?: CourseMatch;
@@ -31,6 +32,9 @@ export default function CourseMatchForm({ courseMatch, cancelEdit }: Props) {
   const watchFile = watch("file", null);
   const dispatch = useAppDispatch();
 
+  const { students } = useStudents();
+
+
   useEffect(() => {
     if (courseMatch && !watchFile && !isDirty) reset(courseMatch);
     return () => {
@@ -39,10 +43,23 @@ export default function CourseMatchForm({ courseMatch, cancelEdit }: Props) {
   }, [courseMatch, reset, watchFile, isDirty]);
 
   async function handleSubmitData(data: FieldValues) {
+    // console.log(data);
+    // console.log(data.studentTableId + " " + data.courseTableId);
+    // var updatedCourseMatch = {
+    //   id: data.id,
+    //   studentId: data.studentTableId,
+    //   courseId: data.courseTableId,
+    // };
+    let updatedCourseMatch = {
+      id: data.id,
+      studentId: data.studentTableId,
+      courseId: data.courseTableId,
+    };
     try {
       let response: CourseMatch;
       if (courseMatch) {
-        response = await agent.Admin.updateCourseMatch(data);
+        response = await agent.Admin.updateCourseMatch(updatedCourseMatch);
+        console.log(response);
         toast.success("CourseMatch updated successfully");
       } else {
         response = await agent.Admin.createCourseMatch(data);
@@ -55,22 +72,27 @@ export default function CourseMatchForm({ courseMatch, cancelEdit }: Props) {
     }
   }
 
+  console.log(courseMatch?.studentTableId + " " + courseMatch?.courseTableId);
   return (
     <Box component={Paper} sx={{ p: 4 }}>
       <Typography variant="h4" gutterBottom sx={{ mb: 4 }}>
-        CourseMatch Details
+        Course Match Details
       </Typography>
       <form onSubmit={handleSubmit(handleSubmitData)}>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
-            <AppTextInput
-              control={control}
-              name="studentNumber"
-              label="Student Number"
-            />
+            {
+              <AppTextInput
+                key={courseMatch?.studentTableId}
+                control={control}
+                name="studentNumber"
+                label="Student Number"
+              />
+            }
           </Grid>
           <Grid item xs={12} sm={6}>
             <AppTextInput
+              key={courseMatch?.courseTableId}
               control={control}
               name="courseId"
               label="Course Id"
@@ -94,3 +116,4 @@ export default function CourseMatchForm({ courseMatch, cancelEdit }: Props) {
     </Box>
   );
 }
+

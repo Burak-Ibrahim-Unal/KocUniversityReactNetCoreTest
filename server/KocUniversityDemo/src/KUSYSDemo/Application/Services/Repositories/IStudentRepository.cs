@@ -13,6 +13,7 @@ namespace Application.Services.Repositories
     public interface IStudentRepository : IAsyncRepository<Student>, ISyncRepository<Student>
     {
         Task<StudentDto> GetStudentById(int id, CancellationToken cancellationToken = default);
+        Task<StudentDto> GetStudentByStudentNumber(string studentNumber, CancellationToken cancellationToken = default);
         Task<PagedList<StudentListDto>> GetAllStudents(int index = 1, int size = 10, CancellationToken cancellationToken = default);
 
     }

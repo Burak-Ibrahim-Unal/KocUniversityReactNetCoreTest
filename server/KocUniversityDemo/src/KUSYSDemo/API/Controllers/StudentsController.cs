@@ -13,10 +13,17 @@ namespace API.Controllers
 {
     public class StudentsController : BaseApiController
     {
-        [HttpGet("{Id}")]
-        public async Task<IActionResult> GetById([FromRoute] GetStudentByIdQuery getModelByIdQuery)
+        [HttpGet("GetStudentById/{Id}")]
+        public async Task<IActionResult> GetById([FromRoute] GetStudentByIdQuery getStudentByIdQuery)
         {
-            var result = await Mediator.Send(getModelByIdQuery);
+            var result = await Mediator.Send(getStudentByIdQuery);
+            return Ok(result);
+        }      
+        
+        [HttpGet("GetStudentByStudentNumber/{StudentNumber}")]
+        public async Task<IActionResult> GetByStudentNumber([FromRoute] GetStudentByStudentNumberQuery getStudentByStudentNumberQuery)
+        {
+            var result = await Mediator.Send(getStudentByStudentNumberQuery);
             return Ok(result);
         }
 

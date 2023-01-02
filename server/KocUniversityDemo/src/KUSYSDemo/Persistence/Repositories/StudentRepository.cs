@@ -35,6 +35,22 @@ namespace Persistence.Repositories
                          };
 
             return Task.FromResult(result.FirstOrDefault());
+        }    
+        
+        public Task<StudentDto?> GetStudentByStudentNumber(string studentNumber, CancellationToken cancellationToken = default)
+        {
+            var result = from student in Context.Students
+                         where student.StudentNumber == studentNumber
+
+                         select new StudentDto
+                         {
+                             Id = student.Id,
+                             FirstName = student.FirstName,
+                             LastName = student.LastName,
+                             StudentNumber = student.StudentNumber,
+                         };
+
+            return Task.FromResult(result.FirstOrDefault());
         }
 
         public async Task<PagedList<StudentListDto>> GetAllStudents(int index = 1, int size = 10, CancellationToken cancellationToken = default)

@@ -26,7 +26,7 @@ namespace Application.Features.Students.Rules
         {
             Student result = await _studentRepository.GetAsync(student => student.StudentNumber == studentNumber);
 
-            if (result != null) throw new BusinessException(Messages.StudentExists);
+            if (result == null) throw new BusinessException(Messages.StudentDoesNotExist);
         }
 
 

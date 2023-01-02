@@ -1,5 +1,7 @@
 export interface CourseMatch {
     id: number;
+    studentTableId: number;
+    courseTableId: number;
     studentFirstName: string,
     studentLastName: string,
     studentNumber: string,

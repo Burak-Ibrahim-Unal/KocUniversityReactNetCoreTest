@@ -26,7 +26,7 @@ namespace Application.Features.Courses.Rules
         {
             Course result = await _courseRepository.GetAsync(course => course.CourseId == courseId);
 
-            if (result != null) throw new BusinessException(Messages.CourseExists);
+            if (result == null) throw new BusinessException(Messages.CourseDoesNotExist);
         }
 
         public async Task CheckCourseById(int id)
@@ -34,6 +34,6 @@ namespace Application.Features.Courses.Rules
             Course result = await _courseRepository.GetAsync(course => course.Id == id);
 
             if (result == null) throw new BusinessException(Messages.CourseDoesNotExist);
-        }
+        }  
     }
 }
