@@ -66,14 +66,14 @@ $ INSERT INTO public."Coursematches" ("StudentId","CourseId") VALUES
 
 #Notes: When you run software,you will not see any data.When you logged in, request will be sent. Only admin user can see admin menu and all users can see data.
 ```
-#Admin
+#Admin Login
 {
   "username": "Burak",
   "password": "Burak1234!"
 }
 
 
-#User
+#User Login
 {
   "username": "testuser",
   "password": "Burak1234!"
