@@ -27,6 +27,13 @@ namespace Application.Features.Courses.Rules
             Course result = await _courseRepository.GetAsync(course => course.CourseId == courseId);
 
             if (result == null) throw new BusinessException(Messages.CourseDoesNotExist);
+        }    
+        
+        public async Task CheckCourseByCourseIdForCreate(string courseId)
+        {
+            Course result = await _courseRepository.GetAsync(course => course.CourseId == courseId);
+
+            if (result != null) throw new BusinessException(Messages.CourseExists);
         }
 
         public async Task CheckCourseById(int id)

@@ -1,5 +1,6 @@
 ﻿using Application.Features.CourseMatches.Dtos;
 using Application.Features.CourseMatches.Rules;
+using Application.Features.Courses.Rules;
 using Application.Services.Repositories;
 using AutoMapper;
 using Core.Application.Pipelines.Logging;
@@ -24,7 +25,7 @@ public class UpdateCourseMatchCommand : IRequest<UpdateCourseMatchDto>, ILoggabl
         private CourseMatchBusinessRules _courseMatchBusinessRules;
         private readonly ICacheService _cacheService;
 
-        public UpdateCourseMatchHandler(CourseMatchBusinessRules courseMatchBusinessRules, IMapper mapper,ICourseMatchRepository courseMatchRepository, ICacheService cacheService)
+        public UpdateCourseMatchHandler(CourseMatchBusinessRules courseMatchBusinessRules, IMapper mapper, ICourseMatchRepository courseMatchRepository, ICacheService cacheService)
         {
             _courseMatchBusinessRules = courseMatchBusinessRules;
             _mapper = mapper;
@@ -36,6 +37,8 @@ public class UpdateCourseMatchCommand : IRequest<UpdateCourseMatchDto>, ILoggabl
         {
             var courseMatchToUpdate = await _courseMatchRepository.GetAsync(x => x.Id == request.Id);
             if (courseMatchToUpdate == null) throw new BusinessException(Messages.CourseMatchDoesNotExist);
+
+            await _courseMatchBusinessRules.CheckCourseMatchByCourseMatchId(request.CourseId, request.StudentId);
 
             courseMatchToUpdate = _mapper.Map(request, courseMatchToUpdate);
             CourseMatch updatedCourseMatch = await _courseMatchRepository.UpdateAsync(courseMatchToUpdate);

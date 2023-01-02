@@ -40,7 +40,7 @@ namespace Application.Features.Courses.Commands
 
             public async Task<CreateCourseDto> Handle(CreateCourseCommand request, CancellationToken cancellationToken)
             {
-                await _courseBusinessRules.CheckCourseByCourseId(request.CourseId);
+                await _courseBusinessRules.CheckCourseByCourseIdForCreate(request.CourseId);
 
                 var mappedCourse = _mapper.Map<Course>(request);
                 var createdCourse = await _courseRepository.AddAsync(mappedCourse);

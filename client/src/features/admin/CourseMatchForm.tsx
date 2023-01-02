@@ -13,6 +13,8 @@ import { validationSchema } from "./courseMatchValidation";
 import { toast } from "react-toastify";
 import { setCourseMatch } from "../courseMatch/courseMatchSlice";
 import useStudents from "../../app/hooks/useStudents";
+import { Course } from "../../app/models/course";
+import { Student } from "../../app/models/student";
 
 interface Props {
   courseMatch?: CourseMatch;
@@ -43,27 +45,30 @@ export default function CourseMatchForm({ courseMatch, cancelEdit }: Props) {
   }, [courseMatch, reset, watchFile, isDirty]);
 
   async function handleSubmitData(data: FieldValues) {
-    // console.log(data);
-    // console.log(data.studentTableId + " " + data.courseTableId);
-    // var updatedCourseMatch = {
-    //   id: data.id,
-    //   studentId: data.studentTableId,
-    //   courseId: data.courseTableId,
-    // };
-    let updatedCourseMatch = {
-      id: data.id,
-      studentId: data.studentTableId,
-      courseId: data.courseTableId,
-    };
+    let responseCourse: Course;
+    let responseStudent: Student;
+    responseCourse = await agent.Course.detailByCourseId(data.courseId);
+    responseStudent = await agent.Student.detailByStudentNumber(data.studentNumber);
+
     try {
       let response: CourseMatch;
       if (courseMatch) {
+        let updatedCourseMatch = {
+          id: data.id,
+          studentId: responseStudent.id,
+          courseId: responseCourse.id,
+        };
         response = await agent.Admin.updateCourseMatch(updatedCourseMatch);
-        console.log(response);
-        toast.success("CourseMatch updated successfully");
+        toast.success("Course Match updated successfully");
       } else {
-        response = await agent.Admin.createCourseMatch(data);
-        toast.success("CourseMatch added successfully");
+        let createdCourseMatch = {
+          studentId: responseStudent.id,
+          courseId: responseCourse.id,
+        };
+        console.log(createdCourseMatch);
+        console.log(data);
+        response = await agent.Admin.createCourseMatch(createdCourseMatch);   
+        toast.success("Course Match added successfully");
       }
       dispatch(setCourseMatch(response));
       cancelEdit();

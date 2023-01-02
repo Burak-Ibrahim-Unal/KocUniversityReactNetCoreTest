@@ -41,7 +41,7 @@ namespace Application.Features.Students.Commands
 
             public async Task<CreateStudentDto> Handle(CreateStudentCommand request, CancellationToken cancellationToken)
             {
-                await _studentBusinessRules.CheckStudentByStudentNumber(request.StudentNumber);
+                await _studentBusinessRules.CheckStudentByStudentNumberForCreate(request.StudentNumber);
 
                 var mappedStudent = _mapper.Map<Student>(request);
                 var createdStudent = await _studentRepository.AddAsync(mappedStudent);

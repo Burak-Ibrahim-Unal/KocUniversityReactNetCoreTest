@@ -86,14 +86,14 @@ const requests = {
 }
 
 const Admin = {
-    createStudent: (product: any) => requests.postForm("Students", createFormData(product)),
-    updateStudent: (product: any) => requests.putForm("Students", createFormData(product)),
+    createStudent: (student: any) => requests.postForm("Students", createFormData(student)),
+    updateStudent: (student: any) => requests.putForm("Students", createFormData(student)),
     deleteStudent: (id: number) => requests.delete(`Students/${id}`),
-    createCourse: (product: any) => requests.postForm("Courses", createFormData(product)),
-    updateCourse: (product: any) => requests.putForm("Courses", createFormData(product)),
+    createCourse: (course: any) => requests.postForm("Courses", createFormData(course)),
+    updateCourse: (course: any) => requests.putForm("Courses", createFormData(course)),
     deleteCourse: (id: number) => requests.delete(`Courses/${id}`),
-    createCourseMatch: (product: any) => requests.postForm("CourseMatches", createFormData(product)),
-    updateCourseMatch: (product: any) => requests.putForm("CourseMatches", createFormData(product)),
+    createCourseMatch: (courseMatch: any) => requests.postForm("CourseMatches", createFormData(courseMatch)),
+    updateCourseMatch: (courseMatch: any) => requests.putForm("CourseMatches", createFormData(courseMatch)),
     deleteCourseMatch: (id: number) => requests.delete(`CourseMatches/${id}`),
 }
 
@@ -107,12 +107,14 @@ function createFormData(item: any) {
 
 const Student = {
     list: (params: URLSearchParams) => requests.get('students', params),
-    details: (id: number) => requests.get(`students/${id}`),
+    details: (id: number) => requests.get(`students/GetStudentById/${id}`),
+    detailByStudentNumber: (studentNumber: string) => requests.get(`students/GetStudentByStudentNumber/${studentNumber}`),
 }
 
 const Course = {
     list: (params: URLSearchParams) => requests.get('courses', params),
-    details: (id: number) => requests.get(`courses/${id}`),
+    details: (id: number) => requests.get(`courses/getCourseById/${id}`),
+    detailByCourseId: (courseId: string) => requests.get(`courses/getCourseByCourseId/${courseId}`),
 }
 
 const CourseMatch = {

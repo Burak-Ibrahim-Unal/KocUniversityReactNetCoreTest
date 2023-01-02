@@ -27,6 +27,13 @@ namespace Application.Features.Students.Rules
             Student result = await _studentRepository.GetAsync(student => student.StudentNumber == studentNumber);
 
             if (result == null) throw new BusinessException(Messages.StudentDoesNotExist);
+        }     
+        
+        public async Task CheckStudentByStudentNumberForCreate(string studentNumber)
+        {
+            Student result = await _studentRepository.GetAsync(student => student.StudentNumber == studentNumber);
+
+            if (result != null) throw new BusinessException(Messages.StudentExists);
         }
 
 
