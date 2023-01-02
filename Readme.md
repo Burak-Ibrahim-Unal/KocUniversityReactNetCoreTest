@@ -3,7 +3,8 @@
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
-* [Setup](#setup)
+* [Setup and Usage](#setup)
+* [Notes](#setup)
 
 ## General info
 This project is made with Net Core and Angular.
@@ -62,3 +63,17 @@ $ INSERT INTO public."Coursematches" ("StudentId","CourseId") VALUES
 	 (6,2),
 	 (4,3);
 ```
+
+#Notes: When you run software,you will not see any data.When you logged in, request will be sent. Only admin user can see admin menu and all users can see data.
+#Admin
+{
+  "username": "Burak",
+  "password": "Burak1234!"
+}
+
+
+#User
+{
+  "username": "testuser",
+  "password": "Burak1234!"
+}
