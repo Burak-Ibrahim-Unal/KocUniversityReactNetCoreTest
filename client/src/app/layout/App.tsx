@@ -1,4 +1,9 @@
-import { Container, createTheme, CssBaseline, ThemeProvider } from "@mui/material";
+import {
+  Container,
+  createTheme,
+  CssBaseline,
+  ThemeProvider,
+} from "@mui/material";
 import React, { useCallback, useEffect, useState } from "react";
 import { Route, Switch } from "react-router";
 import { ToastContainer } from "react-toastify";
@@ -36,54 +41,69 @@ function App() {
     } catch (error) {
       console.log(error);
     }
-  }, [dispatch])
+  }, [dispatch]);
 
   useEffect(() => {
     initApp().then(() => setLoading(false));
-  }, [initApp])
+  }, [initApp]);
 
   const [darkMode, setDarkMode] = useState(false);
-  const paletteType = darkMode ? 'dark' : 'light'
+  const paletteType = darkMode ? "dark" : "light";
   const theme = createTheme({
     palette: {
       mode: paletteType,
       background: {
-        default: paletteType === 'light' ? '#eaeaea' : '#121212'
-      }
-    }
-  })
+        default: paletteType === "light" ? "#eaeaea" : "#121212",
+      },
+    },
+  });
 
   function handleDarkThemeChange() {
     setDarkMode(!darkMode);
   }
 
-  if (loading) return <LoadingComponent message='Initialising app...' />
-  
+  if (loading) return <LoadingComponent message="Initialising app..." />;
+
   return (
     <ThemeProvider theme={theme}>
-      <ToastContainer position='bottom-center' hideProgressBar theme='colored'/>
+      <ToastContainer
+        position="bottom-center"
+        hideProgressBar
+        theme="colored"
+      />
       <CssBaseline />
-      <Header darkMode={darkMode} handleDarkThemeChange={handleDarkThemeChange} />
-      <Container>
-        <Switch>
-          <Route exact path='/' component={HomePage} />
-          <Route exact path='/students' component={StudentList} />
-          <Route path='/students/:id' component={StudentDetails} />
-          <Route exact path='/courses' component={CourseList} />
-          <Route path='/courses/:id' component={CourseDetails} />
-          <Route exact path='/coursematches' component={CourseMatchList} />
-          <Route path='/coursematches/:id' component={CourseMatchDetails} />
-          <PrivateRoute path="/studentPanel" component={StudentPanel} />
-          <PrivateRoute path="/coursePanel" component={CoursePanel} />
-          <PrivateRoute path="/courseMatchPanel" component={CourseMatchPanel} />
-          <Route path='/about' component={AboutPage} />
-          <Route path='/contact' component={ContactPage} />
-          <Route path='/server-error' component={ServerError} />
-          <Route path='/login' component={Login} />
-          <Route path='/register' component={Register} />
-          <Route component={NotFound} />
-        </Switch>
-      </Container>
+      <Header
+        darkMode={darkMode}
+        handleDarkThemeChange={handleDarkThemeChange}
+      />
+      <Route exact path="/" component={HomePage} />
+      <Route
+        path={"/(.+)"}
+        render={() => (
+          <Container sx={{ mb: 4 }}>
+            <Switch>
+              <Route exact path="/students" component={StudentList} />
+              <Route path="/students/:id" component={StudentDetails} />
+              <Route exact path="/courses" component={CourseList} />
+              <Route path="/courses/:id" component={CourseDetails} />
+              <Route exact path="/coursematches" component={CourseMatchList} />
+              <Route path="/coursematches/:id" component={CourseMatchDetails} />
+              <PrivateRoute path="/studentPanel" component={StudentPanel} />
+              <PrivateRoute path="/coursePanel" component={CoursePanel} />
+              <PrivateRoute
+                path="/courseMatchPanel"
+                component={CourseMatchPanel}
+              />
+              <Route path="/about" component={AboutPage} />
+              <Route path="/contact" component={ContactPage} />
+              <Route path="/server-error" component={ServerError} />
+              <Route path="/login" component={Login} />
+              <Route path="/register" component={Register} />
+              <Route component={NotFound} />
+            </Switch>
+          </Container>
+        )}
+      />
     </ThemeProvider>
   );
 }

@@ -6,6 +6,8 @@ import { Router } from 'react-router-dom';
 import App from './app/layout/App';
 import { store } from './app/store/configureStore';
 import reportWebVitals from './reportWebVitals';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export const history = createBrowserHistory();
 
