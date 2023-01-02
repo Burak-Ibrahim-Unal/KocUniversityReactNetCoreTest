@@ -2,9 +2,9 @@
 
 ## Table of contents
 * [General info](#general-info)
-* [Main Technologies](#technologies)
+* [Main Technologies](#maintechnologies)
 * [Setup and Usage](#setup)
-* [Notes](#setup)
+* [Notes](#notes)
 
 ## General info
 This project is made with Net Core and Angular.
