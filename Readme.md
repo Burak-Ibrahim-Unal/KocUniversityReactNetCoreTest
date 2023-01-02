@@ -2,14 +2,14 @@
 
 ## Table of contents
 * [General info](#general-info)
-* [Technologies](#technologies)
+* [Main Technologies](#technologies)
 * [Setup and Usage](#setup)
 * [Notes](#setup)
 
 ## General info
 This project is made with Net Core and Angular.
 	
-## Technologies
+## Main Technologies
 Project is created with: (Net Core 6 CQRS Architecture- React 17 Redux Hook)
 * React Typescript 17.0.2
 * Net Core: 6.0.12
