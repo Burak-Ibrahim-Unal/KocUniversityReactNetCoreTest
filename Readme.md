@@ -64,7 +64,7 @@ $ INSERT INTO public."Coursematches" ("StudentId","CourseId") VALUES
 	 (4,3);
 ```
 
-#Notes: When you run software,you will not see any data.When you logged in, request will be sent. Only admin user can see admin menu and all users can see data.
+#Notes: When you run software,you will not see any data.When you logged in, request will be sent. Only admin user can see admin menu and all users can see data. And dont forget to run Docker Desktop
 ```
 #Admin Login
 {
