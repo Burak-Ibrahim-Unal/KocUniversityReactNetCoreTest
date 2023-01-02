@@ -34,6 +34,8 @@ namespace Persistence.Repositories
                          select new CourseMatchDto
                          {
                              Id = courseMatch.Id,
+                             StudentTableId = student.Id,
+                             CourseTableId = course.Id,
                              StudentFirstName = student.FirstName,
                              StudentLastName = student.LastName,
                              StudentNumber = student.StudentNumber,
@@ -55,6 +57,8 @@ namespace Persistence.Repositories
                          select new CourseMatchListDto
                          {
                              Id = courseMatch.Id,
+                             StudentTableId=student.Id,
+                             CourseTableId=course.Id,
                              StudentFirstName = student.FirstName,
                              StudentLastName = student.LastName,
                              StudentNumber = student.StudentNumber,
