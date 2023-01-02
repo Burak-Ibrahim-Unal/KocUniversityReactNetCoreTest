@@ -9,6 +9,22 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\images\\koc1.jpg",
+      "PackagePath": "staticwebassets\\images\\koc1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\images\\koc2.jpg",
+      "PackagePath": "staticwebassets\\images\\koc2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\images\\koc3.jpg",
+      "PackagePath": "staticwebassets\\images\\koc3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\images\\koc4.jpg",
+      "PackagePath": "staticwebassets\\images\\koc4.jpg"
+    },
+    {
       "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
@@ -29,20 +45,12 @@
       "PackagePath": "staticwebassets\\robots.txt"
     },
     {
-      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\css\\main.abd64e84.css",
-      "PackagePath": "staticwebassets\\static\\css\\main.abd64e84.css"
+      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\css\\main.a1ab047b.css",
+      "PackagePath": "staticwebassets\\static\\css\\main.a1ab047b.css"
     },
     {
-      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\css\\main.abd64e84.css.map",
-      "PackagePath": "staticwebassets\\static\\css\\main.abd64e84.css.map"
-    },
-    {
-      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\css\\main.d8fb8f32.css",
-      "PackagePath": "staticwebassets\\static\\css\\main.d8fb8f32.css"
-    },
-    {
-      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\css\\main.d8fb8f32.css.map",
-      "PackagePath": "staticwebassets\\static\\css\\main.d8fb8f32.css.map"
+      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\css\\main.a1ab047b.css.map",
+      "PackagePath": "staticwebassets\\static\\css\\main.a1ab047b.css.map"
     },
     {
       "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\js\\787.8deca4ba.chunk.js",
@@ -53,28 +61,32 @@
       "PackagePath": "staticwebassets\\static\\js\\787.8deca4ba.chunk.js.map"
     },
     {
-      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\js\\main.69d920e3.js",
-      "PackagePath": "staticwebassets\\static\\js\\main.69d920e3.js"
+      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\js\\main.002cfbe0.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.002cfbe0.js"
     },
     {
-      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\js\\main.69d920e3.js.LICENSE.txt",
-      "PackagePath": "staticwebassets\\static\\js\\main.69d920e3.js.LICENSE.txt"
+      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\js\\main.002cfbe0.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.002cfbe0.js.LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\js\\main.69d920e3.js.map",
-      "PackagePath": "staticwebassets\\static\\js\\main.69d920e3.js.map"
+      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\js\\main.002cfbe0.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.002cfbe0.js.map"
     },
     {
-      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\js\\main.a4136bd7.js",
-      "PackagePath": "staticwebassets\\static\\js\\main.a4136bd7.js"
+      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\media\\slick.2630a3e3eab21c607e21.svg",
+      "PackagePath": "staticwebassets\\static\\media\\slick.2630a3e3eab21c607e21.svg"
     },
     {
-      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\js\\main.a4136bd7.js.LICENSE.txt",
-      "PackagePath": "staticwebassets\\static\\js\\main.a4136bd7.js.LICENSE.txt"
+      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\media\\slick.295183786cd8a1389865.woff",
+      "PackagePath": "staticwebassets\\static\\media\\slick.295183786cd8a1389865.woff"
     },
     {
-      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\js\\main.a4136bd7.js.map",
-      "PackagePath": "staticwebassets\\static\\js\\main.a4136bd7.js.map"
+      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\media\\slick.a4e97f5a2a64f0ab1323.eot",
+      "PackagePath": "staticwebassets\\static\\media\\slick.a4e97f5a2a64f0ab1323.eot"
+    },
+    {
+      "Id": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\media\\slick.c94f7671dcc99dce43e2.ttf",
+      "PackagePath": "staticwebassets\\static\\media\\slick.c94f7671dcc99dce43e2.ttf"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props",

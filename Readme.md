@@ -86,7 +86,15 @@ To run this project's,firstly install Docker Desktop,open cmd and run this comma
 $ docker run --name dev -e POSTGRES_USER=appuser -e POSTGRES_PASSWORD=secret -p 5432:5432 -d postgres:latest
 ```
 
-Optional: Frontend build files implemented into wwwroot folder in Backend... After start backend with Visual Studio,just connect http://localhost:5207/ 
+If you use Visual Studio,just run the project.Frontend build files implemented into wwwroot folder into Backend. After start backend with Visual Studio,just connect http://localhost:5207/. If you use Visual Studio Code, (run this project's backend side) firstly install dotnet sdk 6 and than open Api folder with your ide's terminal:
+Postgresql database will be create and insert student and course records automaticaly...
+```
+$ cd ~\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\API
+$ dotnet run
+
+```
+
+Optional: If you dont want to use wwwroot folder, start backend and open your ide (like Visual Studio),run there commands. 
 (or To run this project's frontend side, install it locally using:)
 
 ```
@@ -94,14 +102,8 @@ $ cd client
 $ npm install (or npm i)
 $ npm start
 ```
+And connect http://localhost:3000/
 
-If you use Visual Studio Code, (run this project's backend side) firstly install dotnet sdk 6 and than open Api folder with your ide's terminal:
-Postgresql Database will be create and insert student and course records automaticaly...
-```
-$ cd ~\KocUniversityReactNetCoreTest\server\KocUniversityDemo\src\KUSYSDemo\API
-$ dotnet run
-
-```
 
 Addionally you can add Course Match records with sql file which is placed root folder.You can use any open source db view tool like Dbviewer (Coursematches__Records.sql)
 ```
@@ -126,7 +128,7 @@ $ INSERT INTO public."Coursematches" ("StudentId","CourseId") VALUES
 ```
 
 ## Notes
-* 1-  When you run software,you will not see any data.When you logged in, request will be sent. Only admin user can see admin menu and all users can see data. And dont forget to run Docker Desktop
+* 1-  When you run software,you will not see any data because of the permission. When you logged in, request will be sent. Only admin user can see admin menu and all users can see data. And dont forget to run Docker container.
 ```
 #Admin Login
 {
@@ -141,4 +143,3 @@ $ INSERT INTO public."Coursematches" ("StudentId","CourseId") VALUES
   "password": "Burak1234!"
 }
 ```
-* 2- If you don't login,you cant see any data.Data are not anonymous.

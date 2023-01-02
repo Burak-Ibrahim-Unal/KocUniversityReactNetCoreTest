@@ -6,10 +6,9 @@ import {
   TableCell,
   TableContainer,
   TableRow,
-  TextField,
   Typography,
 } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router";
 import NotFound from "../../app/errors/NotFound";
 import LoadingComponent from "../../app/layout/LoadingComponent";

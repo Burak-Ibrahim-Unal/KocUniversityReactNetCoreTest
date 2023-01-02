@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OllLsRrD0JMU4AueNyP1masQYS0xI3yn+HIgCeisDH0=",
+  "Hash": "GPHcV/cpFulEuzzXmFFk9dd8OWHOdGwqvMJxOvV6OJ8=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -49,6 +49,74 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\images\\koc1.jpg",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/koc1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\koc1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\images\\koc2.jpg",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/koc2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\koc2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\images\\koc3.jpg",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/koc3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\koc3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\images\\koc4.jpg",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/koc4.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\koc4.jpg"
     },
     {
       "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\index.html",
@@ -136,12 +204,12 @@
       "OriginalItemSpec": "wwwroot\\robots.txt"
     },
     {
-      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\css\\main.abd64e84.css",
+      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\css\\main.a1ab047b.css",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "static/css/main.abd64e84.css",
+      "RelativePath": "static/css/main.a1ab047b.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -150,15 +218,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\css\\main.abd64e84.css"
+      "OriginalItemSpec": "wwwroot\\static\\css\\main.a1ab047b.css"
     },
     {
-      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\css\\main.abd64e84.css.map",
+      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\css\\main.a1ab047b.css.map",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "static/css/main.abd64e84.css.map",
+      "RelativePath": "static/css/main.a1ab047b.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -167,41 +235,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\css\\main.abd64e84.css.map"
-    },
-    {
-      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\css\\main.d8fb8f32.css",
-      "SourceId": "API",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\",
-      "BasePath": "_content/API",
-      "RelativePath": "static/css/main.d8fb8f32.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\css\\main.d8fb8f32.css"
-    },
-    {
-      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\css\\main.d8fb8f32.css.map",
-      "SourceId": "API",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\",
-      "BasePath": "_content/API",
-      "RelativePath": "static/css/main.d8fb8f32.css.map",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\css\\main.d8fb8f32.css.map"
+      "OriginalItemSpec": "wwwroot\\static\\css\\main.a1ab047b.css.map"
     },
     {
       "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\js\\787.8deca4ba.chunk.js",
@@ -238,12 +272,12 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\787.8deca4ba.chunk.js.map"
     },
     {
-      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\js\\main.69d920e3.js",
+      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\js\\main.002cfbe0.js",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "static/js/main.69d920e3.js",
+      "RelativePath": "static/js/main.002cfbe0.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -252,15 +286,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.69d920e3.js"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.002cfbe0.js"
     },
     {
-      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\js\\main.69d920e3.js.LICENSE.txt",
+      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\js\\main.002cfbe0.js.LICENSE.txt",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "static/js/main.69d920e3.js.LICENSE.txt",
+      "RelativePath": "static/js/main.002cfbe0.js.LICENSE.txt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -269,15 +303,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.69d920e3.js.LICENSE.txt"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.002cfbe0.js.LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\js\\main.69d920e3.js.map",
+      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\js\\main.002cfbe0.js.map",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "static/js/main.69d920e3.js.map",
+      "RelativePath": "static/js/main.002cfbe0.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -286,15 +320,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.69d920e3.js.map"
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.002cfbe0.js.map"
     },
     {
-      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\js\\main.a4136bd7.js",
+      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\media\\slick.2630a3e3eab21c607e21.svg",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "static/js/main.a4136bd7.js",
+      "RelativePath": "static/media/slick.2630a3e3eab21c607e21.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -303,15 +337,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.a4136bd7.js"
+      "OriginalItemSpec": "wwwroot\\static\\media\\slick.2630a3e3eab21c607e21.svg"
     },
     {
-      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\js\\main.a4136bd7.js.LICENSE.txt",
+      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\media\\slick.295183786cd8a1389865.woff",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "static/js/main.a4136bd7.js.LICENSE.txt",
+      "RelativePath": "static/media/slick.295183786cd8a1389865.woff",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -320,15 +354,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.a4136bd7.js.LICENSE.txt"
+      "OriginalItemSpec": "wwwroot\\static\\media\\slick.295183786cd8a1389865.woff"
     },
     {
-      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\js\\main.a4136bd7.js.map",
+      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\media\\slick.a4e97f5a2a64f0ab1323.eot",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "static/js/main.a4136bd7.js.map",
+      "RelativePath": "static/media/slick.a4e97f5a2a64f0ab1323.eot",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -337,7 +371,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\static\\js\\main.a4136bd7.js.map"
+      "OriginalItemSpec": "wwwroot\\static\\media\\slick.a4e97f5a2a64f0ab1323.eot"
+    },
+    {
+      "Identity": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\static\\media\\slick.c94f7671dcc99dce43e2.ttf",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Burak\\Desktop\\Github\\KocUniversityReactNetCoreTest\\server\\KocUniversityDemo\\src\\KUSYSDemo\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "static/media/slick.c94f7671dcc99dce43e2.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\media\\slick.c94f7671dcc99dce43e2.ttf"
     }
   ]
 }
