@@ -9,7 +9,7 @@
 * [Notes](#notes)
 
 ## General Info
-This project is made with Net Core and Angular.
+This project is made with Net Core and React.
 	
 ## Main Technologies
 Project is created with: (Net Core 6 CQRS Architecture- React 17 Redux Hook)
